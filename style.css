@@ -42,6 +42,7 @@ div{
   padding: 5px 20px;
   display: table;
   border-radius: 5%;
+  margin: auto;
 }
 .divTextColor{
   color: #e36910;
