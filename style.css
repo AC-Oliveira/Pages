@@ -1,0 +1,50 @@
+*{
+  font-family: 'Roboto Slab', serif;
+  color: bisque;
+}
+body{
+  background: url(https://i.pinimg.com/originals/9a/a8/a1/9aa8a117fe30c9510dd609c4c5331abd.jpg);
+  background-repeat: no-repeat;
+}
+h1,h2{
+  text-align: center;
+}
+img{
+  border: solid bisque 2px;
+  border-radius: 50%;
+
+}
+ul{
+  list-style-type: none;
+}
+.img_Center{
+  text-align: center;
+}
+h1{
+  font-size: 2rem;
+}
+h2{
+  font-size: 1.5rem;
+}
+h3{
+  font-size: 1rem;
+}
+p{
+  font-size: 0.75rem;
+}
+h4{
+  margin: auto 3rem;
+}
+hr{
+  background-color: #ffe4c4;
+  height: 2px;
+  border: none;
+}
+div{
+  background-color: bisque;
+  padding: 5px 20px;
+  display: table;
+}
+.divTextColor{
+  color: #e36910;
+}
