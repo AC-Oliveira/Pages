@@ -1,0 +1,16 @@
+colocar padding no título e links.
+Remover bordas do menu.
+
+só 1 página.
+seções:
+  Sobre mim
+  Projetos
+  Fale comigo
+  Currículo
+  Conhecimentos
+
+Header:
+  fixo -check
+  Space between -check
+  Animação hover links
+  

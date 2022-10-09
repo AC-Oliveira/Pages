@@ -1,0 +1,104 @@
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+.menu-btn__burger {
+  width: 30px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-8px);
+}
+.menu-btn__burger::after {
+  transform: translateY(8px);
+}
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.fdUnerline:hover {
+  text-decoration: underline!important;
+}
+
+.taCenter {
+  text-align: center!important;
+}
+
+.github {
+  &:hover {
+    path {
+      color: black!important;
+    }
+  }
+}
+
+.linkedin{
+  &:hover {
+    path {
+      color: #f0f0f0!important;
+    }
+  }
+}
+
+.mainContainer {
+  display: flex;
+  align-items: center;
+  >:first-child {
+    a {
+      font-size: 2rem!important;
+    }
+  }
+  > * {
+    width: fit-content!important;
+  }
+}
+
+
+.underline-hover-effect {
+  display: inline-block;
+  padding-bottom: 0.25rem; /* defines the space between text and underline */
+  position: relative;
+}
+
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.25s ease-out;
+}
+.underline-hover-effect:hover::before {
+  width: 100%;
+}
