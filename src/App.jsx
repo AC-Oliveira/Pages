@@ -1,14 +1,18 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.scss';
+import Footer from './components/footer';
 import Header from './components/header';
-import GlobalProvider from './context/GlobalContext';
 import About from './pages/about';
 
 function App() {
   return (
-    <GlobalProvider>
+    <>
       <Header />
-      <About />
-    </GlobalProvider>
+      <Routes>
+        <Route path="/" element={<About />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 

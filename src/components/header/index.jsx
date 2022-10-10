@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useContext, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { isMobile } from 'react-device-detect';
@@ -39,7 +37,7 @@ export default function Header() {
   );
 
   return (
-    <Navbar className="mt-1 p-0" expand="md" expanded={expanded}>
+    <Navbar className="p-0" expand="md" expanded={expanded}>
       <Container className={styles.mainContainer}>
         <Container className={active ? 'mx-0' : ''}>
           <Navbar.Brand href="#home" className={`${styles.logo} me-3 font-weight-bold`}>

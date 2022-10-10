@@ -14,6 +14,9 @@ export default function GlobalProvider({ children }) {
 
   window.addEventListener('resize', () => {
     if (window.innerWidth <= 767 && !active) {
+      // const contentItems = document.getElementsByClassName('content');
+      // console.log(contentItems);
+      // contentItems[0].style.minHeight = '';
       setActive(true);
     } else if (window.innerWidth > 767 && active) {
       setActive(false);

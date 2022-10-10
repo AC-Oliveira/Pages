@@ -4,6 +4,12 @@
   padding: 0;
   color: #c0c0c0!important;
   font-family: 'Inter', sans-serif;
+  .title {
+    color: #0a66c2!important;
+  }
+  .content {
+    min-height: calc(100vh - 102.5px);
+  }
 }
 
 
@@ -39,5 +45,5 @@ body {
 }
 
 html, body, #root {
-  height: 100%;
+  min-height: 100vh;
 }
