@@ -1,23 +1,16 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { isMobile } from 'react-device-detect';
 import { RiLinkedinFill } from 'react-icons/ri';
 import { AiOutlineGithub } from 'react-icons/ai';
 import styles from './header.module.scss';
+import { GlobalContext } from '../../context/GlobalContext';
 
 export default function Header() {
-  const [active, setActive] = useState(isMobile);
+  const { active } = useContext(GlobalContext);
   const [expanded, setExpanded] = useState(false);
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth <= 767 && !active) {
-      setActive(true);
-    } else if (window.innerWidth > 767 && active) {
-      setActive(false);
-    }
-  });
 
   const customToggle = (
     <Container
@@ -46,9 +39,9 @@ export default function Header() {
   );
 
   return (
-    <Navbar className="mt-3 p-0" expand="md" expanded={expanded}>
+    <Navbar className="mt-1 p-0" expand="md" expanded={expanded}>
       <Container className={styles.mainContainer}>
-        <Container className={isMobile ? 'mx-0' : ''}>
+        <Container className={active ? 'mx-0' : ''}>
           <Navbar.Brand href="#home" className={`${styles.logo} me-3 font-weight-bold`}>
             Allan Oliveira
           </Navbar.Brand>

@@ -6,7 +6,6 @@ export default function About() {
     <Container className="mt-4 d-flex">
       <Container>
         <Image src={myself} rounded fluid />
-        <h1>teste</h1>
       </Container>
       <Container>
         <h1>Sobre mim</h1>

@@ -9,8 +9,16 @@ seções:
   Currículo
   Conhecimentos
 
+App: tavez seja necessário compartilhar informações entre os componentes.
+Usar Props ou Context API?
+
 Header:
   fixo -check
   Space between -check
-  Animação hover links
+  Animação hover links -check
   
+About:
+  foto -check
+  texto -check
+
+  Provavelmente vou precisar do active e isMobile emoutrso compoenentes também.
