@@ -1,8 +1,57 @@
-.btn {
-  box-shadow:  none!important;
+.btn, .accordion * {
+  box-shadow: none !important;
+}
+.accordion * {
+  .accordion-header :not(.collapsed) {
+    color: var(--primary)!important;
+  }
+  background-color: var(--gray-blue)!important;
+}
+
+.carousel *{
+  color: var(--gray-blue)!important;
 }
 
 .navbar * {
   font-family: 'Shadows Into Light', cursive !important;
   color: var(--primary) !important;
+}
+
+.customCards {
+  place-items: center;
+  >.card {
+    transition: 0.2s;
+    box-shadow: 2px 2px 6px 6px #ffffff0b;
+
+    .card-title > a {
+      color: var(--primary)!important;
+    }
+    > div > p  {
+      max-height: 90px;
+      display: -webkit-box;
+      // max-height: 8rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+  > :not(:first-child) {
+    margin-left: -10rem !important;
+    overflow: hidden;
+  }
+  > :hover, > :focus-within {
+    > div >p {
+      max-height: fit-content;
+      height: fit-content;
+      -webkit-line-clamp: 10000;
+    }
+    transform: translateY(-1rem);
+    position: relative;
+    z-index: 2;
+
+    ~ .card {
+      transform: translateX(7.5rem);
+    }
+  }
 }

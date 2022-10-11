@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { isMobile } from 'react-device-detect';
 import { RiLinkedinFill } from 'react-icons/ri';
 import { AiOutlineGithub } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import styles from './header.module.scss';
 import { GlobalContext } from '../../context/GlobalContext';
 
@@ -47,35 +48,30 @@ export default function Header() {
         {active && customToggle}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto w-100 flex justify-content-center">
-            <Nav.Link
-              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
-              href="#about"
-            >
-              Sobre mim
+            <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
+              <Link to="/" className="text-decoration-none">
+                Sobre mim
+              </Link>
             </Nav.Link>
-            <Nav.Link
-              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
-              href="#projects"
-            >
-              Projetos
+            <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
+              <Link to="/projects" className="text-decoration-none">
+                Projetos
+              </Link>
             </Nav.Link>
-            <Nav.Link
-              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
-              href="#projects"
-            >
-              Fale Comigo
+            <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
+              <Link to="/contact" className="text-decoration-none">
+                Fale Comigo
+              </Link>
             </Nav.Link>
-            <Nav.Link
-              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
-              href="#projects"
-            >
-              Currículo
+            <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
+              <Link to="/resume" className="text-decoration-none">
+                Currículo
+              </Link>
             </Nav.Link>
-            <Nav.Link
-              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
-              href="#projects"
-            >
-              Tecnolgias
+            <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
+              <Link to="/knowledge" className="text-decoration-none">
+                Conhecimentos
+              </Link>
             </Nav.Link>
             {window.innerWidth <= 767 && active && socilNetwork}
           </Nav>

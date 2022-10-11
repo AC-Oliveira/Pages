@@ -1,0 +1,18 @@
+{
+  "pessoais": [
+    {
+      "header": "Portfólio",
+      "text": "Meu portfólio é composto por projetos pessoais e profissionais. Alguns deles foram desenvolvidos em parceria com outras pessoas, outros sozinho. Todos eles foram desenvolvidos com o intuito de aprender e aprimorar minhas habilidades.",
+      "buttonText": "Ver Projeto",
+      "link": "/",
+      "image": "images/working.gif"
+    },
+    {
+      "header": "dashGo",
+      "text": "Meu portfólio é composto por projetos pessoais e profissionais. Alguns deles foram desenvolvidos em parceria com outras pessoas, outros sozinho. Todos eles foram desenvolvidos com o intuito de aprender e aprimorar minhas habilidades.",
+      "buttonText": "Ver Projeto",
+      "link": "/",
+      "image": "images/working.gif"
+    }
+  ]
+}
