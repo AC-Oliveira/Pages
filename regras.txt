@@ -16,9 +16,42 @@ Header:
   fixo -check
   Space between -check
   Animação hover links -check
+  Recolher menu ao clicar em link
   
 About:
   foto -check
   texto -check
 
-  Provavelmente vou precisar do active e isMobile emoutrso compoenentes também.
+Projetos:
+  Projetos Divisão:
+    Trybe:
+      Fundamentos:
+        5 - 4 links
+        Sites - Cards
+        Javascript - Links
+
+      Front-end:
+        Apenas Cards
+      
+      Back-end:
+        Links e 1 Card Talvez.
+      
+      Computer Science:
+        Links Somente
+
+    Pessoais
+      Cards:
+        Meu Portfólio
+        dashGo
+        igNews
+        MyPokedex
+        ignite--react-native-todos
+        Project-Minesweeper
+    Freelas:
+        AppFibromialgia: Card sem Link (privado em baixo do card)
+        materna:pro: Link playstore
+
+  Desktop renderizar cards.
+  Mobile renderizar em carrosel e links em um accordion.
+
+Mudar ícone do navegador.

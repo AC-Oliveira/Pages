@@ -14,7 +14,7 @@ export default function About() {
           <Image style={{ borderRadius: '50px' }} src={myself} fluid />
         </Container>
         <Container className={active && 'mt-4'}>
-          <h1 className="title font-weight-700">Sobre mim</h1>
+          <h1 className="title">Sobre mim</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi
             repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto
