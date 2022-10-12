@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useContext, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { isMobile } from 'react-device-detect';
@@ -64,9 +65,15 @@ export default function Header() {
               </Link>
             </Nav.Link>
             <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
-              <Link to="/resume" className="text-decoration-none">
+              <a
+                onClick={() => {
+                  window.open('../public/projects/fundamentos/1lessonslearned/index.html');
+                }}
+                href="#"
+                className="text-decoration-none"
+              >
                 Currículo
-              </Link>
+              </a>
             </Nav.Link>
             <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
               <Link to="/knowledge" className="text-decoration-none">

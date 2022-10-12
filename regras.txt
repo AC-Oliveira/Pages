@@ -55,6 +55,3 @@ Projetos:
   Mobile renderizar em carrosel e links em um accordion.
 
 Mudar ícone do navegador.
-Colocar arquivos de sites neste repositorio assim vou ter um subdominio para cada repositório.
-Tentar colocar o Minesweeper pra rodar no projeto.
-Maybe change cards with lateral scroll on mobile?
