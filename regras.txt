@@ -41,15 +41,15 @@ Projetos:
 
     Pessoais
       Cards:
+        -dashGo terminar primeiro
         Meu Portfólio
-        dashGo
-        igNews
-        MyPokedex
+        igNews -check
+        MyPokedex -check
         ignite--react-native-todos
-        Project-Minesweeper
+        Project-Minesweeper -check
     Freelas:
-        AppFibromialgia: Card sem Link (privado em baixo do card)
-        materna:pro: Link playstore
+        AppFibromialgia: Card sem Link (privado em baixo do card) -check
+        materna:pro: Link playstore -check
 
   Desktop renderizar cards.
   Mobile renderizar em carrosel e links em um accordion.
