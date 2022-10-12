@@ -36,6 +36,9 @@
       -webkit-box-orient: vertical;
     }
   }
+  .card-img-top {
+    max-height: 197.18px;
+  }
   > :not(:first-child) {
     margin-left: -10rem !important;
     overflow: hidden;

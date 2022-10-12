@@ -1,6 +1,4 @@
 import { Button, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import mygif from '../../assets/mygif.gif';
 
 export default function CustomCard({ header, text, buttonText, link, image }) {
   return (
