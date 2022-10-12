@@ -55,3 +55,17 @@ Projetos:
   Mobile renderizar em carrosel e links em um accordion.
 
 Mudar ícone do navegador.
+Deploy react github pages:
+  Usar HashRouter em vez de BrowserRouter
+  Imagens na pasta public
+  gerar build com gh-pages
+
+Página de Projetos:
+  Estou pensando em uma estilização de card para mobile
+  Uma espécie de carrousel com o card só muda se o usuário clicar.
+
+Colocar projetos pessoais online.
+Fazer a lista dos projetos de Javascript e Back-end.
+Fale Comigo.
+Download CV.
+Conhecimentos.
