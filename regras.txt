@@ -41,17 +41,20 @@ Projetos:
 
     Pessoais
       Cards:
+        -dashGo terminar primeiro
         Meu Portfólio
-        dashGo
-        igNews
-        MyPokedex
+        igNews -check
+        MyPokedex -check
         ignite--react-native-todos
-        Project-Minesweeper
+        Project-Minesweeper -check
     Freelas:
-        AppFibromialgia: Card sem Link (privado em baixo do card)
-        materna:pro: Link playstore
+        AppFibromialgia: Card sem Link (privado em baixo do card) -check
+        materna:pro: Link playstore -check
 
   Desktop renderizar cards.
   Mobile renderizar em carrosel e links em um accordion.
 
 Mudar ícone do navegador.
+Colocar arquivos de sites neste repositorio assim vou ter um subdominio para cada repositório.
+Tentar colocar o Minesweeper pra rodar no projeto.
+Maybe change cards with lateral scroll on mobile?
