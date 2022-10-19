@@ -1,15 +1,18 @@
 import { Button, Card } from 'react-bootstrap';
 
-export default function CustomCard({ header, text, buttonText, link, image }) {
+export default function CustomCard({ onClick, middle, cardType, item: { header, text, link, image } }) {
   return (
-    <Card bg="dark" style={{ width: '15rem' }}>
+    // @ts-ignore
+    <Card onClick={onClick} bg="dark" id={cardType} className={`${middle ? 'mainCard' : ''}`}>
       <Card.Img variant="top" src={image} />
       <Card.Body>
-        <Card.Title>
-          <a href={link}>{header}</a>
-        </Card.Title>
+        <Card.Title className="title">{header}</Card.Title>
         <Card.Text>{text}</Card.Text>
-        <Button variant="primary">{buttonText}</Button>
+        <Button disabled={link === 'privado'} variant="primary">
+          <a className="text-decoration-none" href={link} target="_blank" rel="noreferrer">
+            {link === 'privado' ? 'Privado' : 'Ver Projeto'}
+          </a>
+        </Button>
       </Card.Body>
     </Card>
   );

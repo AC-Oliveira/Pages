@@ -9,13 +9,14 @@
     font-weight: 700;
   }
   .content {
-    min-height: calc(100vh - 102.5px);
+    min-height: calc(100vh - 92.5px);
   }
 }
 
 
 :root {
   // --primary: #8257e6;
+  --white: #fff;
   --primary: #0a66c2;
   --gray-blue: #343a40;
   --gray-50: #F8F8F8;

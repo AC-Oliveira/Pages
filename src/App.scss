@@ -1,6 +1,13 @@
 .btn, .accordion * {
   box-shadow: none !important;
 }
+.btn:disabled {
+  background-color: var(--gray-300) !important;
+  border-color: var(--gray-300) !important;
+  a {
+    color: var(--white)!important;
+  }
+}
 .accordion * {
   .accordion-header :not(.collapsed) {
     color: var(--primary)!important;
@@ -19,10 +26,33 @@
 
 .customCards {
   place-items: center;
-  >.card {
+  max-height: 400px;
+  min-height: 400px;
+  min-width: 300px;
+  max-width: 300px;
+  transform-style: preserve-3d;
+  margin-bottom: 20px;
+  perspective: 1000px;
+  position: relative;
+  .cardsTest label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.95s ease;
+    transform-style: preserve-3d;
+  }
+  .card {
+    cursor: pointer;
+    position: absolute!important;
     transition: 0.2s;
-    box-shadow: 2px 2px 6px 6px #ffffff0b;
-
+    box-shadow: 0 0 5px -2px rgba(#000, 1);
+    border: 1px solid #000;
+    max-width: 300px;
+    min-width: 300px;
+    
     .card-title > a {
       color: var(--primary)!important;
     }
@@ -38,12 +68,194 @@
   }
   .card-img-top {
     max-height: 197.18px;
+    min-height: 197.18px;
   }
-  > :not(:first-child) {
-    margin-left: -10rem !important;
-    overflow: hidden;
+
+
+  #s-fundamentos-1:checked~.cardsTest #l-fundamentos-4,
+  #s-fundamentos-2:checked~.cardsTest #l-fundamentos-5,
+  #s-fundamentos-3:checked~.cardsTest #l-fundamentos-1,
+  #s-fundamentos-4:checked~.cardsTest #l-fundamentos-2,
+  #s-fundamentos-5:checked~.cardsTest #l-fundamentos-3 ,
+  #s-pessoal-1:checked~.cardsTest #l-pessoal-4,
+  #s-pessoal-2:checked~.cardsTest #l-pessoal-5,
+  #s-pessoal-3:checked~.cardsTest #l-pessoal-1,
+  #s-pessoal-4:checked~.cardsTest #l-pessoal-2,
+  #s-pessoal-5:checked~.cardsTest #l-pessoal-3 {
+    transform: scale(0.7) translateX(-70%);
+    z-index: 1;
   }
-  > :hover, > :focus-within {
+  #s-fundamentos-1:checked~.cardsTest #l-fundamentos-5,
+  #s-fundamentos-2:checked~.cardsTest #l-fundamentos-1,
+  #s-fundamentos-3:checked~.cardsTest #l-fundamentos-2,
+  #s-fundamentos-4:checked~.cardsTest #l-fundamentos-3,
+  #s-fundamentos-5:checked~.cardsTest #l-fundamentos-4,
+  #s-pessoal-1:checked~.cardsTest #l-pessoal-5,
+  #s-pessoal-2:checked~.cardsTest #l-pessoal-1,
+  #s-pessoal-3:checked~.cardsTest #l-pessoal-2,
+  #s-pessoal-4:checked~.cardsTest #l-pessoal-3,
+  #s-pessoal-5:checked~.cardsTest #l-pessoal-4 {
+    transform: scale(0.85) translateX(-35%);
+    z-index: 2;
+  }
+  #s-freela-1:checked~.cardsTest #l-freela-1,
+  #s-freela-2:checked~.cardsTest #l-freela-2,
+  #s-fundamentos-1:checked~.cardsTest #l-fundamentos-1,
+  #s-fundamentos-2:checked~.cardsTest #l-fundamentos-2,
+  #s-fundamentos-3:checked~.cardsTest #l-fundamentos-3,
+  #s-fundamentos-4:checked~.cardsTest #l-fundamentos-4,
+  #s-fundamentos-5:checked~.cardsTest #l-fundamentos-5,
+  #s-pessoal-1:checked~.cardsTest #l-pessoal-1,
+  #s-pessoal-2:checked~.cardsTest #l-pessoal-2,
+  #s-pessoal-3:checked~.cardsTest #l-pessoal-3,
+  #s-pessoal-4:checked~.cardsTest #l-pessoal-4,
+  #s-pessoal-5:checked~.cardsTest #l-pessoal-5 {
+    transform: scale(1) translateX(0%);
+    z-index: 3;
+  }
+  #s-freela-1:checked~.cardsTest #l-freela-2,
+  #s-freela-2:checked~.cardsTest #l-freela-1,
+  #s-fundamentos-1:checked~.cardsTest #l-fundamentos-2,
+  #s-fundamentos-2:checked~.cardsTest #l-fundamentos-3,
+  #s-fundamentos-3:checked~.cardsTest #l-fundamentos-4,
+  #s-fundamentos-4:checked~.cardsTest #l-fundamentos-5,
+  #s-fundamentos-5:checked~.cardsTest #l-fundamentos-1,
+  #s-pessoal-1:checked~.cardsTest #l-pessoal-2,
+  #s-pessoal-2:checked~.cardsTest #l-pessoal-3,
+  #s-pessoal-3:checked~.cardsTest #l-pessoal-4,
+  #s-pessoal-4:checked~.cardsTest #l-pessoal-5,
+  #s-pessoal-5:checked~.cardsTest #l-pessoal-1 {
+    transform: scale(0.85) translateX(35%);
+    z-index: 2;
+  }
+  #s-fundamentos-1:checked~.cardsTest #l-fundamentos-3,
+  #s-fundamentos-2:checked~.cardsTest #l-fundamentos-4,
+  #s-fundamentos-3:checked~.cardsTest #l-fundamentos-5,
+  #s-fundamentos-4:checked~.cardsTest #l-fundamentos-1,
+  #s-fundamentos-5:checked~.cardsTest #l-fundamentos-2,
+  #s-pessoal-1:checked~.cardsTest #l-pessoal-3,
+  #s-pessoal-2:checked~.cardsTest #l-pessoal-4,
+  #s-pessoal-3:checked~.cardsTest #l-pessoal-5,
+  #s-pessoal-4:checked~.cardsTest #l-pessoal-1,
+  #s-pessoal-5:checked~.cardsTest #l-pessoal-2 {
+    transform: scale(0.7) translateX(70%);
+    z-index: 1;
+  }
+
+  // start
+  #s-frontend-1:checked~.cardsTest #l-frontend-6,
+  #s-frontend-2:checked~.cardsTest #l-frontend-7,
+  #s-frontend-3:checked~.cardsTest #l-frontend-8,
+  #s-frontend-4:checked~.cardsTest #l-frontend-9,
+  #s-frontend-5:checked~.cardsTest #l-frontend-1,
+  #s-frontend-6:checked~.cardsTest #l-frontend-2,
+  #s-frontend-7:checked~.cardsTest #l-frontend-3,
+  #s-frontend-8:checked~.cardsTest #l-frontend-4,
+  #s-frontend-9:checked~.cardsTest #l-frontend-5 {
+    transform: scale(0.4) translateX(-205%);
+    z-index: 1;
+  }
+  #s-frontend-1:checked~.cardsTest #l-frontend-7,
+  #s-frontend-2:checked~.cardsTest #l-frontend-8,
+  #s-frontend-3:checked~.cardsTest #l-frontend-9,
+  #s-frontend-4:checked~.cardsTest #l-frontend-1,
+  #s-frontend-5:checked~.cardsTest #l-frontend-2,
+  #s-frontend-6:checked~.cardsTest #l-frontend-3,
+  #s-frontend-7:checked~.cardsTest #l-frontend-4,
+  #s-frontend-8:checked~.cardsTest #l-frontend-5,
+  #s-frontend-9:checked~.cardsTest #l-frontend-6 {
+    transform: scale(0.55) translateX(-125%);
+    z-index: 2;
+  }
+  #s-frontend-1:checked~.cardsTest #l-frontend-8,
+  #s-frontend-2:checked~.cardsTest #l-frontend-9,
+  #s-frontend-3:checked~.cardsTest #l-frontend-1,
+  #s-frontend-4:checked~.cardsTest #l-frontend-2,
+  #s-frontend-5:checked~.cardsTest #l-frontend-3,
+  #s-frontend-6:checked~.cardsTest #l-frontend-4,
+  #s-frontend-7:checked~.cardsTest #l-frontend-5,
+  #s-frontend-8:checked~.cardsTest #l-frontend-6,
+  #s-frontend-9:checked~.cardsTest #l-frontend-7 {
+    transform: scale(0.7) translateX(-70%);
+    z-index: 3;
+  }
+  #s-frontend-1:checked~.cardsTest #l-frontend-9,
+  #s-frontend-2:checked~.cardsTest #l-frontend-1,
+  #s-frontend-3:checked~.cardsTest #l-frontend-2,
+  #s-frontend-4:checked~.cardsTest #l-frontend-3,
+  #s-frontend-5:checked~.cardsTest #l-frontend-4,
+  #s-frontend-6:checked~.cardsTest #l-frontend-5,
+  #s-frontend-7:checked~.cardsTest #l-frontend-6,
+  #s-frontend-8:checked~.cardsTest #l-frontend-7,
+  #s-frontend-9:checked~.cardsTest #l-frontend-8 {
+    transform: scale(0.85) translateX(-35%);
+    z-index: 4;
+  }
+  #s-frontend-1:checked~.cardsTest #l-frontend-1,
+  #s-frontend-2:checked~.cardsTest #l-frontend-2,
+  #s-frontend-3:checked~.cardsTest #l-frontend-3,
+  #s-frontend-4:checked~.cardsTest #l-frontend-4,
+  #s-frontend-5:checked~.cardsTest #l-frontend-5,
+  #s-frontend-6:checked~.cardsTest #l-frontend-6,
+  #s-frontend-7:checked~.cardsTest #l-frontend-7,
+  #s-frontend-8:checked~.cardsTest #l-frontend-8,
+  #s-frontend-9:checked~.cardsTest #l-frontend-9 {
+    transform: scale(1) translateX(0);
+    z-index: 5;
+  }
+  #s-frontend-1:checked~.cardsTest #l-frontend-2,
+  #s-frontend-2:checked~.cardsTest #l-frontend-3,
+  #s-frontend-3:checked~.cardsTest #l-frontend-4,
+  #s-frontend-4:checked~.cardsTest #l-frontend-5,
+  #s-frontend-5:checked~.cardsTest #l-frontend-6,
+  #s-frontend-6:checked~.cardsTest #l-frontend-7,
+  #s-frontend-7:checked~.cardsTest #l-frontend-8,
+  #s-frontend-8:checked~.cardsTest #l-frontend-9,
+  #s-frontend-9:checked~.cardsTest #l-frontend-1 {
+    transform: scale(0.85) translateX(35%);
+    z-index: 4;
+  }
+  #s-frontend-1:checked~.cardsTest #l-frontend-3,
+  #s-frontend-2:checked~.cardsTest #l-frontend-4,
+  #s-frontend-3:checked~.cardsTest #l-frontend-5,
+  #s-frontend-4:checked~.cardsTest #l-frontend-6,
+  #s-frontend-5:checked~.cardsTest #l-frontend-7,
+  #s-frontend-6:checked~.cardsTest #l-frontend-8,
+  #s-frontend-7:checked~.cardsTest #l-frontend-9,
+  #s-frontend-8:checked~.cardsTest #l-frontend-1,
+  #s-frontend-9:checked~.cardsTest #l-frontend-2 {
+    transform: scale(0.7) translateX(70%);
+    z-index: 3;
+  }
+  #s-frontend-1:checked~.cardsTest #l-frontend-4,
+  #s-frontend-2:checked~.cardsTest #l-frontend-5,
+  #s-frontend-3:checked~.cardsTest #l-frontend-6,
+  #s-frontend-4:checked~.cardsTest #l-frontend-7,
+  #s-frontend-5:checked~.cardsTest #l-frontend-8,
+  #s-frontend-6:checked~.cardsTest #l-frontend-9,
+  #s-frontend-7:checked~.cardsTest #l-frontend-1,
+  #s-frontend-8:checked~.cardsTest #l-frontend-2,
+  #s-frontend-9:checked~.cardsTest #l-frontend-3 {
+    transform: scale(0.55) translateX(125%);
+    z-index: 2;
+  }
+  #s-frontend-1:checked~.cardsTest #l-frontend-5,
+  #s-frontend-2:checked~.cardsTest #l-frontend-6,
+  #s-frontend-3:checked~.cardsTest #l-frontend-7,
+  #s-frontend-4:checked~.cardsTest #l-frontend-8,
+  #s-frontend-5:checked~.cardsTest #l-frontend-9,
+  #s-frontend-6:checked~.cardsTest #l-frontend-1,
+  #s-frontend-7:checked~.cardsTest #l-frontend-2,
+  #s-frontend-8:checked~.cardsTest #l-frontend-3,
+  #s-frontend-9:checked~.cardsTest #l-frontend-4 {
+    transform: scale(0.4) translateX(205%);
+    z-index: 1;
+  }
+  // end
+
+  .mainCard:hover, > .mainCard:focus-within {
+    position: absolute;
+    z-index: 50000000;
     > div >p {
       max-height: fit-content;
       height: fit-content;
@@ -57,4 +269,19 @@
       transform: translateX(7.5rem);
     }
   }
+}
+
+button.next, button.prev {
+  // border-radius: 0 5px 5px 0!important;
+  border-top: 2px solid var(--primary)!important;
+  border-left: 2px solid var(--gray-blue)!important;
+  border-bottom: 2px solid var(--primary)!important;
+  border-right: 2px solid var(--primary)!important;
+}
+
+button.next {
+  border-radius: 0 5px 5px 0!important;
+}
+button.prev {
+  border-radius: 5px 0 0 5px!important;
 }
