@@ -53,19 +53,34 @@ Projetos:
 
   Desktop renderizar cards.
   Mobile renderizar em carrosel e links em um accordion.
+Deploy de todos os sites. -check
+Fazer cards com animação de carrosel. -check
 
-Mudar ícone do navegador.
-Deploy react github pages:
+Mudar ícone do navegador. -check
+Mudar titulo da página. -check
+
+Deploy react github pages: -check
   Usar HashRouter em vez de BrowserRouter
   Imagens na pasta public
   gerar build com gh-pages
 
-Página de Projetos:
+Página de Projetos: -check
   Estou pensando em uma estilização de card para mobile
   Uma espécie de carrousel com o card só muda se o usuário clicar.
 
-Colocar projetos pessoais online.
-Fazer a lista dos projetos de Javascript e Back-end.
+Colocar projetos pessoais em Next online. -check
+  spaceTraveling
+  igNews
+
+Separar código do carrosel em componente -check
+
+Separar projetos em 2 tabs.
+  Online
+    -Todo o conteudo online
+  Repositórios
+    -Fazer a lista dos projetos de Javascript e Back-end.
+    -Todo o conteudo no github
+
 Fale Comigo.
 Download CV.
 Conhecimentos.

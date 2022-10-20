@@ -4,7 +4,8 @@ import Footer from './components/footer';
 import Header from './components/header';
 import About from './pages/about';
 import Notfound from './pages/notfound';
-import Projects from './pages/projects';
+import { ProjectsRepositories } from './pages/projectsRepositories';
+import { ProjectsSites } from './pages/projectsSites';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/sites" element={<ProjectsSites />} />
+        <Route path="/projects/repositories" element={<ProjectsRepositories />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
       <Footer />

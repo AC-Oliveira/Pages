@@ -55,7 +55,7 @@ export default function Header() {
               </Link>
             </Nav.Link>
             <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
-              <Link to="/projects" className="text-decoration-none">
+              <Link to="/projects/sites" className="text-decoration-none">
                 Projetos
               </Link>
             </Nav.Link>

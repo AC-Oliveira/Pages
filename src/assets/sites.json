@@ -5,35 +5,35 @@
       "text": "Meu portfólio é composto por projetos pessoais e profissionais. Alguns deles foram desenvolvidos em parceria com outras pessoas, outros sozinho. Todos eles foram desenvolvidos com o intuito de aprender e aprimorar minhas habilidades.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/",
-      "image": "images/pessoais/working.gif"
+      "image": "/images/pessoais/working.gif"
     },
     {
       "header": "SpaceTravelling",
       "text": "Space travelling é um blog feito com NextJS e Prismic CMS e Typescript onde é possível fazer posts através editor muito parecido com o Word sem precisar saber programar.",
       "buttonText": "Ver Projeto",
       "link": "https://space-travelling-vercel.vercel.app/",
-      "image": "images/pessoais/sp.gif"
+      "image": "/images/pessoais/sp.gif"
     },
     {
       "header": "igNews",
       "text": "Mais um blog feito com NextJS e Typescript dessa vez incluindo autenticação com o Github e simulação de assinatura com API do Stripe.",
       "buttonText": "Ver Projeto",
       "link": "https://ig-news-vercel-eta.vercel.app/",
-      "image": "images/pessoais/igNews.gif"
+      "image": "/images/pessoais/igNews.gif"
     },
     {
       "header": "MyPokedex",
       "text": "Um site feito em React e Typescript contendo a lista de todos os Pokemons da PokeAPI com scroll infinito e página de informações de cada pokemon.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/My-Pokedex/",
-      "image": "images/pessoais/pokedex.gif"
+      "image": "/images/pessoais/pokedex.gif"
     },
     {
       "header": "CampoMinado",
       "text": "Uma GUI feita com python3 e Tkinter, aplicando conceitos de POO. A idéia era reproduzir o antigo jogo de windows que joguei muito durante a minha infância.",
       "buttonText": "Ver Projeto",
       "link": "/to-be-continued",
-      "image": "images/pessoais/minesweeper.gif"
+      "image": "/images/pessoais/minesweeper.gif"
     }
   ],
   "freela": [
@@ -42,14 +42,14 @@
       "text": "APK feito em React utilizando Ionic e Capacitor. Esse app tem por objetivo concientizar gestantes sobre a importância do pré natal odontológico, através ded notificações semanais.",
       "buttonText": "Ver Projeto",
       "link": "https://play.google.com/store/apps/details?id=materna.pro&hl=en-US&ah=YhrwUuYGS2F5G66meqC85-T4AdQ",
-      "image": "images/freela/materna.gif"
+      "image": "/images/freela/materna.gif"
     },
     {
       "header": "AppFibromialgia",
       "text": "Site feito com React Bootstrap, Node e MongoDB. O site é uma plataforma para fazer triagem de candidatos a um tratamento experimental para fibromialgia.",
       "buttonText": "Ver Projeto",
       "link": "privado",
-      "image": "images/freela/appfibro.gif"
+      "image": "/images/freela/appfibro.gif"
     }
   ],
   "fundamentos": [
@@ -58,35 +58,35 @@
       "text": "Feito com html e css logo no ínico da minha jornada na Trybe. Projeto simples, mas que me deu uma base para o que viria a seguir.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/1-fundamentals/01-lessons-learned",
-      "image": "images/trybe/fundamentos/firstPortfolio.gif"
+      "image": "/images/trybe/fundamentos/firstPortfolio.gif"
     },
     {
       "header": "PixelArt",
       "text": "Primeiro projeto utilizando em conjunto HTML, CSS e Javascript. O objetivo era criar uma página onde o usuário pudesse desenhar um pixel art.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/1-fundamentals/04-pixel-art",
-      "image": "images/trybe/fundamentos/pixelArt.gif"
+      "image": "/images/trybe/fundamentos/pixelArt.gif"
     },
     {
       "header": "Shopping Cart",
       "text": "Primeiro projeto utilizando chamadas assíncronas a API do Mercado Livre. O objetivo era entender conceitos como assincronismo, callbacks e promises.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/1-fundamentals/08-shopping-cart",
-      "image": "images/trybe/fundamentos/shoppingCart.gif"
+      "image": "/images/trybe/fundamentos/shoppingCart.gif"
     },
     {
       "header": "ToDo List",
       "text": "Primeiro projeto utilizando manipulação de DOM. Nesse projeto aprendi como manipular elementos da Web com Javascript.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/1-fundamentals/03-todo-list",
-      "image": "images/trybe/fundamentos/todoList.gif"
+      "image": "/images/trybe/fundamentos/todoList.gif"
     },
     {
       "header": "Trybewartz",
       "text": "Primeiro projeto em dupla, trabalho em equipe em primeiro lugar!!!😊😊😊",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/1-fundamentals/05-trybewarts",
-      "image": "images/trybe/fundamentos/trybewartz.gif"
+      "image": "/images/trybe/fundamentos/trybewartz.gif"
     }
   ],
   "frontEnd": [
@@ -95,63 +95,63 @@
       "text": "Primeiro Projeto com React. Aqui aprendi a criar componentes e utilizar classes no React.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/2-front-end/01-movie-cards-library",
-      "image": "images/trybe/frontend/movieCards.gif"
+      "image": "/images/trybe/frontend/movieCards.gif"
     },
     {
       "header": "MovieCardsCRUD",
       "text": "Projeto feito em React. Aqui aprendi passar props e utilizar o estado em componentes de classe.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/2-front-end/03-movie-cards-library-crud",
-      "image": "images/trybe/frontend/movieCardsCRUD.gif"
+      "image": "/images/trybe/frontend/movieCardsCRUD.gif"
     },
     {
       "header": "MovieCardsStateful",
       "text": "Primeiro Projeto com React. Projeto onde foi possível perceber o poder do React e a possibilidade criar componentes com atualização de estado local sem a necessidade de renderizar de novo a página inteira.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/2-front-end/02-movie-cards-library-stateful",
-      "image": "images/trybe/frontend/movieCardsStatefull.gif"
+      "image": "/images/trybe/frontend/movieCardsStatefull.gif"
     },
     {
       "header": "OnlineStore",
       "text": "Primeiro projeto em Grupo utilizando React. Neste projeto se utilizou a API do Mercado Livre, a ideia era construir um site com todas as funcionalidades de um e-commerce como carrinho e avaliação dos produtos.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/2-front-end/04-online-store",
-      "image": "images/trybe/frontend/onlineStore.gif"
+      "image": "/images/trybe/frontend/onlineStore.gif"
     },
     {
       "header": "PlanetSearch",
       "text": "Primeiro projeto utilizando Redux no React. Neste projeto foi possível entender como funciona o Redux e como ele pode ser utilizado para gerenciar o estado de uma aplicação.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/2-front-end/08-starwars-planet-search",
-      "image": "images/trybe/frontend/planetSearch.gif"
+      "image": "/images/trybe/frontend/planetSearch.gif"
     },
     {
       "header": "RecipesApp",
       "text": "Projeto em grupo utilizando ContextAPI e React. A intenção do projeto era criar um site muito similar a um aplicativo de receitas para mobile.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/2-front-end/09-recipes-app",
-      "image": "images/trybe/frontend/recipesApp.gif"
+      "image": "/images/trybe/frontend/recipesApp.gif"
     },
     {
       "header": "TestingLibrary",
       "text": "Primeiro projeto envolvento testes unitários e de integração. Nesse projeto coloquei em prática conceitos como TDD.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/2-front-end/05-react-testing-library",
-      "image": "images/trybe/frontend/testingLibrary.gif"
+      "image": "/images/trybe/frontend/testingLibrary.gif"
     },
     {
       "header": "TrybeWallet",
       "text": "Projeto utilizando ContextAPI. O objetivo era criar um site de carteira de controle de gastos.",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/2-front-end/06-trybe-wallet",
-      "image": "images/trybe/frontend/trybeWallet.gif"
+      "image": "/images/trybe/frontend/trybeWallet.gif"
     },
     {
       "header": "Trivia",
       "text": "Mais um projeto em grupo. Aqui o objetivo era criar um jogo de perguntas e respostas utilizando a API do Trivia. A entrega foi algo semelhante ao jogo show do milhão!",
       "buttonText": "Ver Projeto",
       "link": "https://ac-oliveira.github.io/Trybe-Projects/2-front-end/07-trivia-react-redux",
-      "image": "images/trybe/frontend/triviaReactRedux.gif"
+      "image": "/images/trybe/frontend/triviaReactRedux.gif"
     }
   ]
 }

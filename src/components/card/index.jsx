@@ -1,6 +1,6 @@
 import { Button, Card } from 'react-bootstrap';
 
-export default function CustomCard({ onClick, middle, cardType, item: { header, text, link, image } }) {
+export function CustomCard({ onClick, middle, cardType, item: { header, text, link, image } }) {
   return (
     // @ts-ignore
     <Card onClick={onClick} bg="dark" id={cardType} className={`${middle ? 'mainCard' : ''}`}>

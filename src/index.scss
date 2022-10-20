@@ -8,8 +8,12 @@
     color: #0a66c2!important;
     font-weight: 700;
   }
+  .primary {
+    color: #0a66c2!important;
+  }
   .content {
-    min-height: calc(100vh - 92.5px);
+    min-height: calc(100vh - 90px);
+    max-width: 1400px;
   }
 }
 

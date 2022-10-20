@@ -1,0 +1,162 @@
+{
+  "pessoal": [
+    {
+      "projectName": "Ebytr-Jobs-Scraping",
+      "description": "Projeto de Web Scraping feito para o site da Trybe com o objetivo de extrair dados de vagas de emprego e aplicar para as vagas que se adequam ao meu perfil. O projeto utiliza Python, Selenium, BeautifulSoup4 e o ChromeWebDriver para fazer a automação.",
+      "link": "https://github.com/AC-Oliveira/Ebytr_Jobs_Scraping",
+      "technologies": ["Python", "Selenium", "Chrome"]
+    },
+    {
+      "projectName": "Mine-Sweeper",
+      "description": "Projeto de um jogo de Campo Minado feito em Python. O projeto utiliza Python e Tkinter para criar a interface visual do jogo. Este projeto foi feito com o intuito de começar a aprender POO.",
+      "link": "https://github.com/AC-Oliveira/Project-Minesweeper",
+      "technologies": ["Python"]
+    },
+    {
+      "projectName": "API-App-Fibromialgia",
+      "description": "Projeto de uma API feita em NodeJS para a plataforma de triagem de candidatos a um tratamento experimental par Fibromialgia. O projeto utiliza NodeJS, Express, MongoDB e Mongoose para criar a API.",
+      "link": "privado",
+      "technologies": ["NodeJS", "Express", "MongoDB"]
+    }
+  ],
+  "trybe": {
+    "javascript": [
+      {
+        "projectName": "Playground-Functions",
+        "description": "Projeto de uma biblioteca de funções feita em JavaScript. O projeto utiliza JavaScript e ESLint para criar a biblioteca.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/1-fundamentals/02-playground-functions",
+        "technologies": ["JavaScript", "ESLint"]
+      },
+      {
+        "projectName": "Unit-Tests",
+        "description": "Projeto de testes unitários feito em JavaScript. O projeto utiliza JavaScript, Jest e ESLint para criar os testes.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/1-fundamentals/06-js-unity-tests",
+        "technologies": ["JavaScript", "Jest", "ESLint"]
+      },
+      {
+        "projectName": "Zoo-Functions",
+        "description": "Projeto de uma biblioteca de funções feita em JavaScript utilizando High Order Functions. O projeto utiliza JavaScript, Jest e ESLint para criar a biblioteca.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/1-fundamentals/07-zoo-functions",
+        "technologies": ["JavaScript", "Jest", "ESLint"]
+      },
+      {
+        "projectName": "Jest-Async-Mocking",
+        "description": "Projeto de testes assíncronos e mocking feito em JavaScript utilizando Jest. O projeto utiliza JavaScript, Jest e ESLint para criar os testes.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/1-fundamentals/09-jest-async-mocking",
+        "technologies": ["JavaScript", "Jest", "ESLint"]
+      }
+    ],
+    "backend": [
+      {
+        "projectName": "All-for-One",
+        "description": "Primeiro rojeto de banco de dados feito em SQL. O projeto utiliza SQL e MySQL para criar o banco de dados.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/3-back-end/01-all-for-one",
+        "technologies": ["SQL", "MySQL"]
+      },
+      {
+        "projectName": "Vocabulary-Booster",
+        "description": "Projeto de banco de dados em SQL. Nesse projeto foi necessário utilizar JOINs, UNIONs e subqueries.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/3-back-end/02-vocabulary-booster",
+        "technologies": ["SQL", "MySQL"]
+      },
+      {
+        "projectName": "One-for-All",
+        "description": "Projeto de banco de dados feito em SQL. Nesse projeto foi necessário utilizar Triggers, Functions, Stored Procedures e Views.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/3-back-end/03-one-for-all",
+        "technologies": ["SQL", "MySQL"]
+      },
+      {
+        "projectName": "Docker-todo-List",
+        "description": "Primeiro projeto com Docker. Nesse projeto foi necessário criar uma imagem Docker e subir um container com o banco de dados MySQL utilizando comandos do Docker e criando uma Dockerfile.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/3-back-end/04-docker-todo-list",
+        "technologies": ["Docker", "MySQL"]
+      },
+      {
+        "projectName": "Data-Flights",
+        "description": "Primeiro projeto de banco de dados em MongoDB. Nesse projeto foi necessário utilizar comandos do MongoDB em javascript para criar o banco de dados exercitando CRUD e seleções.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/3-back-end/05-mongodb-dataflights",
+        "technologies": ["MongoDB"]
+      },
+      {
+        "projectName": "Commerce",
+        "description": "Projeto de banco de dados em MongoDB. Nesse projeto se utilizou comandos do MongoDB para extrair dados e fazer edições de dados em grandes quantidades de dados.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/3-back-end/06-mongodb-commerce",
+        "technologies": ["MongoDB"]
+      },
+      {
+        "projectName": "Talker-Manager",
+        "description": "Primeiro projeto com NodeJs e Express. Nesse projeto foi criada uma API para cadastro de palestrantes e palestras, utilizando middlewares para validação de dados e tratamento de erros.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/3-back-end/08-talker-manager",
+        "technologies": ["NodeJS", "Express"]
+      },
+      {
+        "projectName": "Store-Manager",
+        "description": "Projeto de API com NodeJs, Express e MongoDB. Nesse projeto foi criada uma API para gerenciamento de uma loja de produtos, utilizando a arquitetura MVC.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/3-back-end/09-store-manager",
+        "technologies": ["NodeJS", "Express", "MongoDB"]
+      },
+      {
+        "projectName": "Cookmaster",
+        "description": "Projeto de API com NodeJs, Express e MongoDB. Nesse projeto foi criada uma API para gerenciamento de receitas de culinária, utilizando a arquitetura MVC e upload de imagens com multer.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/3-back-end/10-cookmaster",
+        "technologies": ["NodeJS", "Express", "MongoDB"]
+      },
+      {
+        "projectName": "Stranger-Things",
+        "description": "Projeto FullStack simples com uma API de personagens de Stranger Things. Nesse projeto o objetivo principal era fazer deploy no Heroku do front e back-end.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/3-back-end/11-stranger-things",
+        "technologies": ["NodeJS", "Express", "MongoDB", "React", "Heroku"]
+      },
+      {
+        "projectName": "Blogs-API",
+        "description": "Projeto de API com NodeJs, Express e MongoDB. Nesse projeto foi criada uma API para gerenciamento de blogs, utilizando Sequelize para fazer inserções no banco de dados e autenticação com JWT.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/3-back-end/12-blogs-api",
+        "technologies": ["NodeJS", "Express", "MongoDB", "Sequelize"]
+      },
+      {
+        "projectName": "Delivery-App",
+        "description": "Projeto Full-Stack em grupo com objetivo de criar uma aplicação de delivery. Nesse projeto foi criada uma API para gerenciamento de pedidos e usuários utilizando Sequelize, Socket.IO, Node, React e Express.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/3-back-end/13-delivery-app",
+        "technologies": ["NodeJS", "Express", "MongoDB", "Sequelize", "SocketIO", "React"]
+      }
+    ],
+    "computerScience": [
+      {
+        "projectName": "Job-Insights",
+        "description": "Primeiro projeto do modulo de Computer Science. Nesse projeto se utiliza a linguagem python para gerar uma biblioteca de funções que retira informações de um aquivo csv.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/4-computer-science/01-job-insights",
+        "technologies": ["Python"]
+      },
+      {
+        "projectName": "Inventory-Report",
+        "description": "Neste projeto foi necessário gerar dados a partir de csv's, xml's e json's utilizando a linguagem python, pytest para testes unitários, black e flake para formatação de código.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/4-computer-science/02-inventory-report",
+        "technologies": ["Python", "Pytest"]
+      },
+      {
+        "projectName": "Tech-News",
+        "description": "Neste projeto foi necessário criar um web scrapper para retirar dados do site de notícias TechNews e armazena-los com pymongo. O script busca por notícias de acordo com título, categoria, data e fonte.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/4-computer-science/03-tech-news",
+        "technologies": ["Python", "Pytest"]
+      },
+      {
+        "projectName": "Alghoritms",
+        "description": "Neste projeto foi necessário criar algoritmos para resolver problemas de ordenação, busca e recursão. Os algoritmos foram implementados em python e testados com pytest.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/4-computer-science/04-Algorithms",
+        "technologies": ["Python", "Pytest"]
+      },
+      {
+        "projectName": "Restaurant-Orders",
+        "description": "Neste projeto foram implementados algoritmos para analisar dados de um restaurante utilizando classes, objetos e dicionários em python. O script utiliza conceitos de POO para estruturar as informações.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/4-computer-science/05-restaurant-orders",
+        "technologies": ["Python", "Pytest"]
+      },
+      {
+        "projectName": "Ting",
+        "description": "No ting foram utilizados todos os conceitos de POO aprendidos como herança, interfaces, exceções e override, além de serem envolvidas estruturas complexas como dicionários e listas em python.",
+        "link": "https://github.com/AC-Oliveira/Trybe-Projects/tree/master/4-computer-science/06-ting",
+        "technologies": ["Python", "Pytest"]
+      }
+    ]
+  }
+}
