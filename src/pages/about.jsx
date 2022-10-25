@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { Container, Image } from 'react-bootstrap';
-// import myself from '../assets/eu.jpg';
-import meme from '../assets/mem.jpg';
+import myself from '../assets/eu.jpeg';
 import { GlobalContext } from '../context/GlobalContext';
 
 export function About() {
@@ -14,20 +13,18 @@ export function About() {
         } justify-content-center align-items-center`}
       >
         <Container>
-          <Image style={{ borderRadius: '50px' }} src={meme} fluid />
+          <Image style={{ borderRadius: '50px' }} src={myself} fluid />
         </Container>
         <Container className={active && 'mt-4'}>
           {/* <h1 className="title">Sobre mim</h1> */}
-          <h1 className="title">Em construção</h1>
+          <h1 className="title">Sobre mim</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi
-            repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto
-            fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur
-            iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit
-            sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo
-            neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi at sunt excepturi
-            expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum. Perspiciatis minima
-            nesciunt dolorem! Officiis iure rerum voluptates a cumque velit{' '}
+            Me chamo Allan Oliveira, residente de São Gonçalo - RJ, atualmente estou migrando do curso de Engenharia
+            Elétrica para Ciências da Computação na UERJ. Em 2022 terminei o curso de Desenvolvimento Web da Trybe, um
+            curso com mais de 1500 horas de formação que aborda conteúdos relacionados a fundamentos de desenvolvimento
+            web, desenvolvimento Front-end, desenvolvimento Back-end, ciência da computação, engenharia de software,
+            metodologias ágeis e habilidades comportamentais Atualmente trabalho na área de Desenvolvimento Web como
+            Freelancer e estou buscando oportunidades no mercado como desenvolvedor de software.
           </p>
         </Container>
       </Container>

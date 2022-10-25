@@ -6,7 +6,7 @@ export function CustomCard({ onClick, middle, cardType, item: { header, text, li
     // @ts-ignore
     <Card onClick={onClick} bg="dark" id={cardType} className={`${middle ? 'mainCard' : ''}`}>
       <Card.Img variant="top" src={image} />
-      {link !== 'privado' && (
+      {repo !== 'privado' && (
         <Container className="d-none repo-hidden">
           <a href={repo || '/'} target="_blank" rel="noreferrer">
             <RiGithubFill size={50} fill="#0a66c2" />
