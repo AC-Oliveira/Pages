@@ -14,7 +14,6 @@ export default function GlobalProvider({ children }) {
 
   window.addEventListener('resize', () => {
     if (window.innerWidth <= 991 && !active) {
-      console.log(active, window.innerWidth);
       setActive(true);
     } else if (window.innerWidth > 991 && active) {
       setActive(false);

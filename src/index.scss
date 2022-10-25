@@ -2,37 +2,36 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #c0c0c0!important;
+  color: #c0c0c0 !important;
   font-family: 'Inter', sans-serif;
   .title {
-    color: #0a66c2!important;
+    color: #0a66c2 !important;
     font-weight: 700;
   }
   .primary {
-    color: #0a66c2!important;
-    fill: #0a66c2!important;
+    color: #0a66c2 !important;
+    fill: #0a66c2 !important;
   }
   .content {
     min-height: calc(100vh - 90px);
     max-width: 1400px;
-    // overflow-x: hidden!important;
+    overflow-x: hidden!important;
   }
   .whatsapp {
-    background-color: #25d366!important;
+    background-color: #25d366 !important;
   }
 }
-
 
 :root {
   // --primary: #8257e6;
   --white: #fff;
   --primary: #0a66c2;
   --gray-blue: #343a40;
-  --gray-50: #F8F8F8;
+  --gray-50: #f8f8f8;
   --gray-200: #c0c0c0;
   --gray-300: #9b9b9b;
   --gray-850: #2d2d2d;
-  --gray-900: #1A1D23;
+  --gray-900: #1a1d23;
 }
 
 @media (max-width: 1080px) {
@@ -49,17 +48,14 @@
 
 body {
   background: var(--gray-850);
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   min-height: 100vh;
 }
-
-// https://docs.google.com/file/uc?id=1zXkYkLpc9sM1IxsyqJUFazK56WcQvFGBjNgbrJdsOiw&export=download/
-// https://drive.google.com/uc?export=download&id=1zXkYkLpc9sM1IxsyqJUFazK56WcQvFGBjNgbrJdsOiw
-// https://drive.google.com/uc?export=download&id=1QEEMHJPUm5_358bLc-WHBJR-eKaJjpqp

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "HTML5",
+    "text": "HTML5 é uma linguagem de marcação usada para estruturar e apresentar conteúdo para a World Wide Web. O HTML5 é a quinta e atual maior versão do HTML."
+  },
+  {
+    "name": "CSS3",
+    "text": "CSS3 é uma linguagem de estilo usada para descrever a apresentação de um documento escrito em uma linguagem de marcação como HTML. CSS descreve como os elementos HTML devem ser renderizados."
+  },
+  {
+  "name": "JavaScript",
+    "text": "JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multi-paradigma."
+  },
+  {
+    "name": "ESLint",
+    "text": "ESLint é uma ferramenta de análise de código estática para identificar padrões problemáticos encontrados no código JavaScript."
+  },
+  {
+    "name": "Jest",
+    "text": "Jest é um framework de testes com foco em simplicidade. Ele trabalha com projetos usando: Babel, TypeScript, Node, React, Angular, Vue e mais!"
+  },
+  {
+    "name": "React",
+    "text": "React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantido pelo Facebook, Instagram, outras empresas e uma comunidade de desenvolvedores individuais."
+  },
+  {
+    "name": "Redux",
+    "text": "Redux é uma biblioteca JavaScript de código aberto para gerenciar o estado de aplicativos. É mais comumente usado com bibliotecas como React ou Angular para construir interfaces de usuário."
+  },
+  {
+    "name": "Context API",
+    "text": "Context fornece uma maneira de passar dados através da árvore de componentes sem ter que passar props manualmente em cada nível."
+  },
+  {
+    "name": "MySQL",
+    "text": "MySQL é um sistema de gerenciamento de banco de dados, que utiliza a linguagem SQL como interface. Foi originalmente desenvolvido por uma empresa sueca chamada MySQL AB, que foi adquirida pela Sun Microsystems em 2008, que por sua vez foi adquirida pela Oracle Corporation em 2010."
+  },
+  {
+    "name": "MongoDB",
+    "text": "MongoDB é um software de banco de dados orientado a documentos livre, de código aberto e multiplataforma, escrito na linguagem C++. Classificado como um programa de banco de dados NoSQL, o MongoDB usa documentos semelhantes a JSON com esquemas."
+  },
+  {
+    "name": "Docker",
+    "text": "Docker é uma plataforma de código aberto que automatiza o implantação de aplicativos em contêineres de software, fornecendo uma camada adicional de abstração e automação de virtualização de nível de sistema operacional no Windows e no Linux."
+  },
+  {
+    "name": "Node.js",
+    "text": "Node.js é um interpretador de JavaScript assíncrono com código aberto orientado a eventos, focado em migrar a programação do Javascript do cliente para os servidores."
+  },
+  {
+    "name": "Express",
+    "text": "Express é um framework web para Node.js, lançado como software livre e de código aberto sob a Licença MIT. Foi projetado para criar aplicações web e APIs. Foi inspirado no framework Sinatra."
+  },
+  {
+    "name": "Sequelize",
+    "text": "Sequelize é um ORM baseado em promessas para Node.js e io.js. Ele suporta o dialecto PostgreSQL, MySQL, MariaDB, SQLite e MSSQL e recursos solidários, relacionamentos, transações e muito mais."
+  },
+  {
+    "name": "Heroku",
+    "text": "Heroku é uma plataforma em nuvem como serviço que suporta várias linguagens de programação. Foi lançado em 2007 como uma plataforma como serviço (PaaS) que suporta apenas a linguagem Ruby, mas foi expandida para suportar Java, Node.js, Scala, Clojure, Python, PHP e Go."
+  },
+  {
+    "name": "Git",
+    "text": "Git é um sistema de controle de versão distribuído de código aberto e gratuito projetado para lidar com tudo, desde projetos pequenos a muito grandes com velocidade e eficiência."
+  },
+  {
+    "name": "Socket.IO",
+    "text": "Socket.IO é uma biblioteca JavaScript que permite a comunicação em tempo real bidirecional entre clientes e servidores. Foi projetado para ser implantado em páginas da Web, mas também pode ser usado em servidores Node.js."
+  },
+  {
+    "name": "Pytest",
+    "text": "Pytest é um framework de testes Python de código aberto. Ele suporta testes unitários, testes de integração, testes de coleta e testes parametrizados."
+  },
+  {
+    "name": "Python",
+    "text": "Python é uma linguagem de programação interpretada de alto nível, de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em 1991."
+  },
+  {
+    "name": "Selenium",
+    "text": "Selenium é uma estrutura de automação de código aberto para testes de navegador da web. Ele fornece uma maneira de escrever testes automatizados que podem ser executados em vários navegadores."
+  },
+  {
+    "name": "Ionic",
+    "text": "Ionic é um framework de código aberto para desenvolvimento de aplicativos móveis e de desktop baseados em HTML, CSS e JavaScript. Ele é focado no desenvolvimento de aplicativos híbridos e de aplicativos móveis progressivos."
+  }
+]

@@ -2,9 +2,10 @@ import { Button, Col, Container, Form, Row, ToastContainer, Toast } from 'react-
 import { GoMail } from 'react-icons/go';
 import { SiWhatsapp } from 'react-icons/si';
 import { MdSmartphone } from 'react-icons/md';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import sendMail from '../assets/sendMail';
 import { Loading } from '../components/loading';
+import { GlobalContext } from '../context/GlobalContext';
 
 export function Contact() {
   const messageToEnconde = encodeURI('Olá, gostaria de saber mais sobre o seu trabalho!');
@@ -24,20 +25,12 @@ export function Contact() {
   };
 
   const regexEmail = /.*@.*.\.com/;
-  const validateForm = () => {
-    if (userInfo.name === '' || userInfo.email === '' || userInfo.message === '') {
-      return false;
-    }
-    if (!regexEmail.test(userInfo.email)) {
-      return false;
-    }
-    return true;
-  };
+  const { active } = useContext(GlobalContext);
 
   return (
     <Container className="content d-flex justify-content-center align-items-center">
       <Row>
-        <Col lg={6}>
+        <Col lg={6} className={`${active ? 'mt-4' : ''}`}>
           <h3 className="title">Fale Comigo!</h3>
           <p className="primary">
             <span className="me-2">
@@ -58,7 +51,7 @@ export function Contact() {
             </Button>
           </a>
         </Col>
-        <Col lg={6}>
+        <Col lg={6} className={`${active ? 'my-5' : ''}`}>
           <h3 className="title">Me envie um email:</h3>
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -96,7 +89,6 @@ export function Contact() {
               // disabled={!regexEmail.test(userInfo.email)}
               onClick={async () => {
                 setLoading(true);
-                console.log('aqui');
                 try {
                   if (!regexEmail.test(userInfo.email)) throw new Error('Email inválido');
                   await sendMail.sendMeMail(userInfo);
