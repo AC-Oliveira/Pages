@@ -12,16 +12,15 @@ export function ProjectsSites() {
   const [fundamentosIndex, setFundamentosIndex] = useState(5);
   const [frontendIndex, setFrontendIndex] = useState(9);
   const { pathname } = useLocation();
-  console.log(pathname.includes('sites'));
 
   const { active } = useContext(GlobalContext);
 
   return (
-    <Container className="content my-3">
-      <Container className="d-flex justify-content-center">
+    <Container className={`${active && 'mt-4'} content`}>
+      <Container className="d-flex justify-content-center mt-2">
         <a
           className={`text-center text-decoration-none py-0 my-0 prj ${pathname.includes('sites') && 'prj-selected'}`}
-          href="/projects/sites"
+          href="#/sites"
         >
           Sites
         </a>
@@ -29,17 +28,17 @@ export function ProjectsSites() {
           className={`text-center text-decoration-none py-0 my-0  prj ${
             pathname.includes('repositories') && 'prj-selected'
           }`}
-          href="/projects/repositories"
+          href="#/repositories"
         >
           Repositórios
         </a>
       </Container>
-      <Container className="d-flex flex-column align-items-center py-4 overflow-hidden">
-        <h1 className="title">Projetos</h1>
+      <Container className="d-flex flex-column align-items-center pt-4">
+        <h1 className={`title ${active && 'mt-3'}`}>Projetos</h1>
         <Container>
           <Row className="d-flex justify-content-center m-0 p-0">
-            <Col className="d-flex flex-column justify-content-center align-items-center p-0">
-              <h4 className="mt-4">Pessoais</h4>
+            <Col lg={6} className="mb-3 d-flex flex-column justify-content-center align-items-center p-0">
+              <h4 className="mt-2">Pessoais</h4>
               <CardList
                 items={myProjects.pessoais}
                 cb={setPessoalIndex}
@@ -50,8 +49,11 @@ export function ProjectsSites() {
                 <CardControl cb={setPessoalIndex} index={pessoalIndex} maxLen={myProjects.pessoais.length} />
               </Container>
             </Col>
-            <Col className={`${active && 'mt-4'} d-flex flex-column justify-content-center align-items-center p-0`}>
-              <h4 className="mt-4">Freela</h4>
+            <Col
+              lg={6}
+              className={`${active && 'mt-4'} mb-3 d-flex flex-column justify-content-center align-items-center p-0`}
+            >
+              <h4 className="mt-2">Freela</h4>
               <CardList items={myProjects.freela} cb={setFreelaIndex} cardType="freela" customIndex={freelaIndex} />
               <Container fluid className={`${active ? 'mt-1' : 'mt-5'} w-100 d-flex justify-content-center m-0`}>
                 <CardControl cb={setFreelaIndex} index={freelaIndex} maxLen={myProjects.freela.length} />
@@ -59,10 +61,13 @@ export function ProjectsSites() {
             </Col>
           </Row>
         </Container>
-        <h2 className="title mt-5">Trybe</h2>
+        <h2 className={`${active ? 'mt-4' : 'mt-2'} title`}>Trybe</h2>
         <Container>
           <Row className="d-flex justify-content-center m-0 p-0">
-            <Col className="d-flex flex-column justify-content-center align-items-center p-0">
+            <Col
+              xxl={6}
+              className={`${active && 'mt-4'} mb-3 d-flex flex-column justify-content-center align-items-center p-0`}
+            >
               <h4 className="mt-2">Fundamentos</h4>
               <CardList
                 items={myProjects.fundamentos}
@@ -74,7 +79,10 @@ export function ProjectsSites() {
                 <CardControl cb={setFundamentosIndex} index={fundamentosIndex} maxLen={myProjects.fundamentos.length} />
               </Container>
             </Col>
-            <Col className="d-flex flex-column justify-content-center align-items-center p-0">
+            <Col
+              xxl={6}
+              className={`${active && 'mt-4'} mb-3 d-flex flex-column justify-content-center align-items-center p-0`}
+            >
               <h4 className="mt-2">Front-end</h4>
               <CardList
                 items={myProjects.frontEnd}

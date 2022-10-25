@@ -14,7 +14,7 @@ export function CardList({ items, cb, cardType = 'default', customIndex = 3 }) {
           id={`s-${cardType}-${index + 1}`}
         />
       ))}
-      <Container className="p-0 cardsTest">
+      <Container className="p-0 cardLabel">
         {items.map((item, index) => {
           return (
             <>

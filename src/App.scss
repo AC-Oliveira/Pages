@@ -17,6 +17,10 @@
   color: var(--primary) !important;
 }
 
+.selected-route {
+  color: var(--gray-200)!important;
+}
+
 .prj {
   width: 170px!important;
   position: relative;
@@ -60,18 +64,49 @@ div.repocard-container {
   margin-bottom: 20px;
   perspective: 1000px;
   position: relative;
-  .cardsTest label {
+  .cardLabel label {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
-    cursor: pointer;
     transition: transform 0.95s ease;
     transform-style: preserve-3d;
+    .mainCard {
+      .repo-hidden {
+        position: absolute!important;
+        height: 197.18px!important;
+        background-color: #000;
+        opacity: 0.9;
+        &:hover {
+          display: flex!important;
+          justify-content: center!important;
+          align-items: center!important;
+          svg:hover {
+            fill: #fff!important;
+            transition: 0.01s!important;
+          }
+        }
+      }
+      .card-img-top {
+        &:hover {
+          +.repo-hidden {
+            display: flex!important;
+            justify-content: center!important;
+            align-items: center!important;
+          }
+        }
+      }
+    }
+    .card:not(.mainCard) {
+      cursor: pointer;
+    }
+  .card-img-top {
+    max-height: 197.18px;
+    min-height: 197.18px;
+  }
   }
   .card {
-    cursor: pointer;
     position: absolute!important;
     transition: 0.2s;
     box-shadow: 0 0 5px -2px rgba(#000, 1);
@@ -92,10 +127,6 @@ div.repocard-container {
       -webkit-box-orient: vertical;
     }
   }
-  .card-img-top {
-    max-height: 197.18px;
-    min-height: 197.18px;
-  }
 
   .mainCard:hover, > .mainCard:focus-within {
     position: absolute;
@@ -115,12 +146,66 @@ div.repocard-container {
   }
 }
 
+
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  color: var(--primary)!important;
+  font-weight: bold;
+  display: flex;
+  opacity: 0.9;
+  justify-content: center;
+  align-items: center;
+  &:after {
+    content: ' .';
+    animation: dots 1s steps(5, end) infinite;}
+  
+  @keyframes dots {
+    0%, 20% {
+      color: rgba(0,0,0,0);
+      text-shadow:
+        .25em 0 0 rgba(0,0,0,0),
+        .5em 0 0 rgba(0,0,0,0);}
+    40% {
+      color: var(--primary);
+      text-shadow:
+        .25em 0 0 rgba(0,0,0,0),
+        .5em 0 0 rgba(0,0,0,0);}
+    60% {
+      text-shadow:
+        .25em 0 0 var(--primary),
+        .5em 0 0 rgba(0,0,0,0);}
+    80%, 100% {
+      text-shadow:
+        .25em 0 0 var(--primary),
+        .5em 0 0 var(--primary);}
+  }
+}
+
 button.next, button.prev {
   // border-radius: 0 5px 5px 0!important;
   border-top: 2px solid var(--primary)!important;
   border-left: 2px solid var(--gray-blue)!important;
   border-bottom: 2px solid var(--primary)!important;
   border-right: 2px solid var(--primary)!important;
+}
+
+.loading-underline {
+  height: 1px;
+  border: 1px solid var(--primary);
+  animation: drawBorder 6s ease forwards;
+  @keyframes drawBorder {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
 }
 
 button.next {
@@ -130,182 +215,182 @@ button.prev {
   border-radius: 5px 0 0 5px!important;
 }
 
-#s-fundamentos-1:checked~.cardsTest #l-fundamentos-4,
-#s-fundamentos-2:checked~.cardsTest #l-fundamentos-5,
-#s-fundamentos-3:checked~.cardsTest #l-fundamentos-1,
-#s-fundamentos-4:checked~.cardsTest #l-fundamentos-2,
-#s-fundamentos-5:checked~.cardsTest #l-fundamentos-3 ,
-#s-pessoal-1:checked~.cardsTest #l-pessoal-4,
-#s-pessoal-2:checked~.cardsTest #l-pessoal-5,
-#s-pessoal-3:checked~.cardsTest #l-pessoal-1,
-#s-pessoal-4:checked~.cardsTest #l-pessoal-2,
-#s-pessoal-5:checked~.cardsTest #l-pessoal-3 {
+#s-fundamentos-1:checked~.cardLabel #l-fundamentos-4,
+#s-fundamentos-2:checked~.cardLabel #l-fundamentos-5,
+#s-fundamentos-3:checked~.cardLabel #l-fundamentos-1,
+#s-fundamentos-4:checked~.cardLabel #l-fundamentos-2,
+#s-fundamentos-5:checked~.cardLabel #l-fundamentos-3 ,
+#s-pessoal-1:checked~.cardLabel #l-pessoal-4,
+#s-pessoal-2:checked~.cardLabel #l-pessoal-5,
+#s-pessoal-3:checked~.cardLabel #l-pessoal-1,
+#s-pessoal-4:checked~.cardLabel #l-pessoal-2,
+#s-pessoal-5:checked~.cardLabel #l-pessoal-3 {
   transform: scale(0.7) translateX(-70%);
   z-index: 1;
 }
-#s-fundamentos-1:checked~.cardsTest #l-fundamentos-5,
-#s-fundamentos-2:checked~.cardsTest #l-fundamentos-1,
-#s-fundamentos-3:checked~.cardsTest #l-fundamentos-2,
-#s-fundamentos-4:checked~.cardsTest #l-fundamentos-3,
-#s-fundamentos-5:checked~.cardsTest #l-fundamentos-4,
-#s-pessoal-1:checked~.cardsTest #l-pessoal-5,
-#s-pessoal-2:checked~.cardsTest #l-pessoal-1,
-#s-pessoal-3:checked~.cardsTest #l-pessoal-2,
-#s-pessoal-4:checked~.cardsTest #l-pessoal-3,
-#s-pessoal-5:checked~.cardsTest #l-pessoal-4 {
+#s-fundamentos-1:checked~.cardLabel #l-fundamentos-5,
+#s-fundamentos-2:checked~.cardLabel #l-fundamentos-1,
+#s-fundamentos-3:checked~.cardLabel #l-fundamentos-2,
+#s-fundamentos-4:checked~.cardLabel #l-fundamentos-3,
+#s-fundamentos-5:checked~.cardLabel #l-fundamentos-4,
+#s-pessoal-1:checked~.cardLabel #l-pessoal-5,
+#s-pessoal-2:checked~.cardLabel #l-pessoal-1,
+#s-pessoal-3:checked~.cardLabel #l-pessoal-2,
+#s-pessoal-4:checked~.cardLabel #l-pessoal-3,
+#s-pessoal-5:checked~.cardLabel #l-pessoal-4 {
   transform: scale(0.85) translateX(-35%);
   z-index: 2;
 }
-#s-freela-1:checked~.cardsTest #l-freela-1,
-#s-freela-2:checked~.cardsTest #l-freela-2,
-#s-fundamentos-1:checked~.cardsTest #l-fundamentos-1,
-#s-fundamentos-2:checked~.cardsTest #l-fundamentos-2,
-#s-fundamentos-3:checked~.cardsTest #l-fundamentos-3,
-#s-fundamentos-4:checked~.cardsTest #l-fundamentos-4,
-#s-fundamentos-5:checked~.cardsTest #l-fundamentos-5,
-#s-pessoal-1:checked~.cardsTest #l-pessoal-1,
-#s-pessoal-2:checked~.cardsTest #l-pessoal-2,
-#s-pessoal-3:checked~.cardsTest #l-pessoal-3,
-#s-pessoal-4:checked~.cardsTest #l-pessoal-4,
-#s-pessoal-5:checked~.cardsTest #l-pessoal-5 {
+#s-freela-1:checked~.cardLabel #l-freela-1,
+#s-freela-2:checked~.cardLabel #l-freela-2,
+#s-fundamentos-1:checked~.cardLabel #l-fundamentos-1,
+#s-fundamentos-2:checked~.cardLabel #l-fundamentos-2,
+#s-fundamentos-3:checked~.cardLabel #l-fundamentos-3,
+#s-fundamentos-4:checked~.cardLabel #l-fundamentos-4,
+#s-fundamentos-5:checked~.cardLabel #l-fundamentos-5,
+#s-pessoal-1:checked~.cardLabel #l-pessoal-1,
+#s-pessoal-2:checked~.cardLabel #l-pessoal-2,
+#s-pessoal-3:checked~.cardLabel #l-pessoal-3,
+#s-pessoal-4:checked~.cardLabel #l-pessoal-4,
+#s-pessoal-5:checked~.cardLabel #l-pessoal-5 {
   transform: scale(1) translateX(0%);
   z-index: 3;
 }
-#s-freela-1:checked~.cardsTest #l-freela-2,
-#s-freela-2:checked~.cardsTest #l-freela-1,
-#s-fundamentos-1:checked~.cardsTest #l-fundamentos-2,
-#s-fundamentos-2:checked~.cardsTest #l-fundamentos-3,
-#s-fundamentos-3:checked~.cardsTest #l-fundamentos-4,
-#s-fundamentos-4:checked~.cardsTest #l-fundamentos-5,
-#s-fundamentos-5:checked~.cardsTest #l-fundamentos-1,
-#s-pessoal-1:checked~.cardsTest #l-pessoal-2,
-#s-pessoal-2:checked~.cardsTest #l-pessoal-3,
-#s-pessoal-3:checked~.cardsTest #l-pessoal-4,
-#s-pessoal-4:checked~.cardsTest #l-pessoal-5,
-#s-pessoal-5:checked~.cardsTest #l-pessoal-1 {
+#s-freela-1:checked~.cardLabel #l-freela-2,
+#s-freela-2:checked~.cardLabel #l-freela-1,
+#s-fundamentos-1:checked~.cardLabel #l-fundamentos-2,
+#s-fundamentos-2:checked~.cardLabel #l-fundamentos-3,
+#s-fundamentos-3:checked~.cardLabel #l-fundamentos-4,
+#s-fundamentos-4:checked~.cardLabel #l-fundamentos-5,
+#s-fundamentos-5:checked~.cardLabel #l-fundamentos-1,
+#s-pessoal-1:checked~.cardLabel #l-pessoal-2,
+#s-pessoal-2:checked~.cardLabel #l-pessoal-3,
+#s-pessoal-3:checked~.cardLabel #l-pessoal-4,
+#s-pessoal-4:checked~.cardLabel #l-pessoal-5,
+#s-pessoal-5:checked~.cardLabel #l-pessoal-1 {
   transform: scale(0.85) translateX(35%);
   z-index: 2;
 }
-#s-fundamentos-1:checked~.cardsTest #l-fundamentos-3,
-#s-fundamentos-2:checked~.cardsTest #l-fundamentos-4,
-#s-fundamentos-3:checked~.cardsTest #l-fundamentos-5,
-#s-fundamentos-4:checked~.cardsTest #l-fundamentos-1,
-#s-fundamentos-5:checked~.cardsTest #l-fundamentos-2,
-#s-pessoal-1:checked~.cardsTest #l-pessoal-3,
-#s-pessoal-2:checked~.cardsTest #l-pessoal-4,
-#s-pessoal-3:checked~.cardsTest #l-pessoal-5,
-#s-pessoal-4:checked~.cardsTest #l-pessoal-1,
-#s-pessoal-5:checked~.cardsTest #l-pessoal-2 {
+#s-fundamentos-1:checked~.cardLabel #l-fundamentos-3,
+#s-fundamentos-2:checked~.cardLabel #l-fundamentos-4,
+#s-fundamentos-3:checked~.cardLabel #l-fundamentos-5,
+#s-fundamentos-4:checked~.cardLabel #l-fundamentos-1,
+#s-fundamentos-5:checked~.cardLabel #l-fundamentos-2,
+#s-pessoal-1:checked~.cardLabel #l-pessoal-3,
+#s-pessoal-2:checked~.cardLabel #l-pessoal-4,
+#s-pessoal-3:checked~.cardLabel #l-pessoal-5,
+#s-pessoal-4:checked~.cardLabel #l-pessoal-1,
+#s-pessoal-5:checked~.cardLabel #l-pessoal-2 {
   transform: scale(0.7) translateX(70%);
   z-index: 1;
 }
 
 // start
-#s-frontend-1:checked~.cardsTest #l-frontend-6,
-#s-frontend-2:checked~.cardsTest #l-frontend-7,
-#s-frontend-3:checked~.cardsTest #l-frontend-8,
-#s-frontend-4:checked~.cardsTest #l-frontend-9,
-#s-frontend-5:checked~.cardsTest #l-frontend-1,
-#s-frontend-6:checked~.cardsTest #l-frontend-2,
-#s-frontend-7:checked~.cardsTest #l-frontend-3,
-#s-frontend-8:checked~.cardsTest #l-frontend-4,
-#s-frontend-9:checked~.cardsTest #l-frontend-5 {
+#s-frontend-1:checked~.cardLabel #l-frontend-6,
+#s-frontend-2:checked~.cardLabel #l-frontend-7,
+#s-frontend-3:checked~.cardLabel #l-frontend-8,
+#s-frontend-4:checked~.cardLabel #l-frontend-9,
+#s-frontend-5:checked~.cardLabel #l-frontend-1,
+#s-frontend-6:checked~.cardLabel #l-frontend-2,
+#s-frontend-7:checked~.cardLabel #l-frontend-3,
+#s-frontend-8:checked~.cardLabel #l-frontend-4,
+#s-frontend-9:checked~.cardLabel #l-frontend-5 {
   transform: scale(0.4) translateX(-205%);
   z-index: 1;
 }
-#s-frontend-1:checked~.cardsTest #l-frontend-7,
-#s-frontend-2:checked~.cardsTest #l-frontend-8,
-#s-frontend-3:checked~.cardsTest #l-frontend-9,
-#s-frontend-4:checked~.cardsTest #l-frontend-1,
-#s-frontend-5:checked~.cardsTest #l-frontend-2,
-#s-frontend-6:checked~.cardsTest #l-frontend-3,
-#s-frontend-7:checked~.cardsTest #l-frontend-4,
-#s-frontend-8:checked~.cardsTest #l-frontend-5,
-#s-frontend-9:checked~.cardsTest #l-frontend-6 {
+#s-frontend-1:checked~.cardLabel #l-frontend-7,
+#s-frontend-2:checked~.cardLabel #l-frontend-8,
+#s-frontend-3:checked~.cardLabel #l-frontend-9,
+#s-frontend-4:checked~.cardLabel #l-frontend-1,
+#s-frontend-5:checked~.cardLabel #l-frontend-2,
+#s-frontend-6:checked~.cardLabel #l-frontend-3,
+#s-frontend-7:checked~.cardLabel #l-frontend-4,
+#s-frontend-8:checked~.cardLabel #l-frontend-5,
+#s-frontend-9:checked~.cardLabel #l-frontend-6 {
   transform: scale(0.55) translateX(-125%);
   z-index: 2;
 }
-#s-frontend-1:checked~.cardsTest #l-frontend-8,
-#s-frontend-2:checked~.cardsTest #l-frontend-9,
-#s-frontend-3:checked~.cardsTest #l-frontend-1,
-#s-frontend-4:checked~.cardsTest #l-frontend-2,
-#s-frontend-5:checked~.cardsTest #l-frontend-3,
-#s-frontend-6:checked~.cardsTest #l-frontend-4,
-#s-frontend-7:checked~.cardsTest #l-frontend-5,
-#s-frontend-8:checked~.cardsTest #l-frontend-6,
-#s-frontend-9:checked~.cardsTest #l-frontend-7 {
+#s-frontend-1:checked~.cardLabel #l-frontend-8,
+#s-frontend-2:checked~.cardLabel #l-frontend-9,
+#s-frontend-3:checked~.cardLabel #l-frontend-1,
+#s-frontend-4:checked~.cardLabel #l-frontend-2,
+#s-frontend-5:checked~.cardLabel #l-frontend-3,
+#s-frontend-6:checked~.cardLabel #l-frontend-4,
+#s-frontend-7:checked~.cardLabel #l-frontend-5,
+#s-frontend-8:checked~.cardLabel #l-frontend-6,
+#s-frontend-9:checked~.cardLabel #l-frontend-7 {
   transform: scale(0.7) translateX(-70%);
   z-index: 3;
 }
-#s-frontend-1:checked~.cardsTest #l-frontend-9,
-#s-frontend-2:checked~.cardsTest #l-frontend-1,
-#s-frontend-3:checked~.cardsTest #l-frontend-2,
-#s-frontend-4:checked~.cardsTest #l-frontend-3,
-#s-frontend-5:checked~.cardsTest #l-frontend-4,
-#s-frontend-6:checked~.cardsTest #l-frontend-5,
-#s-frontend-7:checked~.cardsTest #l-frontend-6,
-#s-frontend-8:checked~.cardsTest #l-frontend-7,
-#s-frontend-9:checked~.cardsTest #l-frontend-8 {
+#s-frontend-1:checked~.cardLabel #l-frontend-9,
+#s-frontend-2:checked~.cardLabel #l-frontend-1,
+#s-frontend-3:checked~.cardLabel #l-frontend-2,
+#s-frontend-4:checked~.cardLabel #l-frontend-3,
+#s-frontend-5:checked~.cardLabel #l-frontend-4,
+#s-frontend-6:checked~.cardLabel #l-frontend-5,
+#s-frontend-7:checked~.cardLabel #l-frontend-6,
+#s-frontend-8:checked~.cardLabel #l-frontend-7,
+#s-frontend-9:checked~.cardLabel #l-frontend-8 {
   transform: scale(0.85) translateX(-35%);
   z-index: 4;
 }
-#s-frontend-1:checked~.cardsTest #l-frontend-1,
-#s-frontend-2:checked~.cardsTest #l-frontend-2,
-#s-frontend-3:checked~.cardsTest #l-frontend-3,
-#s-frontend-4:checked~.cardsTest #l-frontend-4,
-#s-frontend-5:checked~.cardsTest #l-frontend-5,
-#s-frontend-6:checked~.cardsTest #l-frontend-6,
-#s-frontend-7:checked~.cardsTest #l-frontend-7,
-#s-frontend-8:checked~.cardsTest #l-frontend-8,
-#s-frontend-9:checked~.cardsTest #l-frontend-9 {
+#s-frontend-1:checked~.cardLabel #l-frontend-1,
+#s-frontend-2:checked~.cardLabel #l-frontend-2,
+#s-frontend-3:checked~.cardLabel #l-frontend-3,
+#s-frontend-4:checked~.cardLabel #l-frontend-4,
+#s-frontend-5:checked~.cardLabel #l-frontend-5,
+#s-frontend-6:checked~.cardLabel #l-frontend-6,
+#s-frontend-7:checked~.cardLabel #l-frontend-7,
+#s-frontend-8:checked~.cardLabel #l-frontend-8,
+#s-frontend-9:checked~.cardLabel #l-frontend-9 {
   transform: scale(1) translateX(0);
   z-index: 5;
 }
-#s-frontend-1:checked~.cardsTest #l-frontend-2,
-#s-frontend-2:checked~.cardsTest #l-frontend-3,
-#s-frontend-3:checked~.cardsTest #l-frontend-4,
-#s-frontend-4:checked~.cardsTest #l-frontend-5,
-#s-frontend-5:checked~.cardsTest #l-frontend-6,
-#s-frontend-6:checked~.cardsTest #l-frontend-7,
-#s-frontend-7:checked~.cardsTest #l-frontend-8,
-#s-frontend-8:checked~.cardsTest #l-frontend-9,
-#s-frontend-9:checked~.cardsTest #l-frontend-1 {
+#s-frontend-1:checked~.cardLabel #l-frontend-2,
+#s-frontend-2:checked~.cardLabel #l-frontend-3,
+#s-frontend-3:checked~.cardLabel #l-frontend-4,
+#s-frontend-4:checked~.cardLabel #l-frontend-5,
+#s-frontend-5:checked~.cardLabel #l-frontend-6,
+#s-frontend-6:checked~.cardLabel #l-frontend-7,
+#s-frontend-7:checked~.cardLabel #l-frontend-8,
+#s-frontend-8:checked~.cardLabel #l-frontend-9,
+#s-frontend-9:checked~.cardLabel #l-frontend-1 {
   transform: scale(0.85) translateX(35%);
   z-index: 4;
 }
-#s-frontend-1:checked~.cardsTest #l-frontend-3,
-#s-frontend-2:checked~.cardsTest #l-frontend-4,
-#s-frontend-3:checked~.cardsTest #l-frontend-5,
-#s-frontend-4:checked~.cardsTest #l-frontend-6,
-#s-frontend-5:checked~.cardsTest #l-frontend-7,
-#s-frontend-6:checked~.cardsTest #l-frontend-8,
-#s-frontend-7:checked~.cardsTest #l-frontend-9,
-#s-frontend-8:checked~.cardsTest #l-frontend-1,
-#s-frontend-9:checked~.cardsTest #l-frontend-2 {
+#s-frontend-1:checked~.cardLabel #l-frontend-3,
+#s-frontend-2:checked~.cardLabel #l-frontend-4,
+#s-frontend-3:checked~.cardLabel #l-frontend-5,
+#s-frontend-4:checked~.cardLabel #l-frontend-6,
+#s-frontend-5:checked~.cardLabel #l-frontend-7,
+#s-frontend-6:checked~.cardLabel #l-frontend-8,
+#s-frontend-7:checked~.cardLabel #l-frontend-9,
+#s-frontend-8:checked~.cardLabel #l-frontend-1,
+#s-frontend-9:checked~.cardLabel #l-frontend-2 {
   transform: scale(0.7) translateX(70%);
   z-index: 3;
 }
-#s-frontend-1:checked~.cardsTest #l-frontend-4,
-#s-frontend-2:checked~.cardsTest #l-frontend-5,
-#s-frontend-3:checked~.cardsTest #l-frontend-6,
-#s-frontend-4:checked~.cardsTest #l-frontend-7,
-#s-frontend-5:checked~.cardsTest #l-frontend-8,
-#s-frontend-6:checked~.cardsTest #l-frontend-9,
-#s-frontend-7:checked~.cardsTest #l-frontend-1,
-#s-frontend-8:checked~.cardsTest #l-frontend-2,
-#s-frontend-9:checked~.cardsTest #l-frontend-3 {
+#s-frontend-1:checked~.cardLabel #l-frontend-4,
+#s-frontend-2:checked~.cardLabel #l-frontend-5,
+#s-frontend-3:checked~.cardLabel #l-frontend-6,
+#s-frontend-4:checked~.cardLabel #l-frontend-7,
+#s-frontend-5:checked~.cardLabel #l-frontend-8,
+#s-frontend-6:checked~.cardLabel #l-frontend-9,
+#s-frontend-7:checked~.cardLabel #l-frontend-1,
+#s-frontend-8:checked~.cardLabel #l-frontend-2,
+#s-frontend-9:checked~.cardLabel #l-frontend-3 {
   transform: scale(0.55) translateX(125%);
   z-index: 2;
 }
-#s-frontend-1:checked~.cardsTest #l-frontend-5,
-#s-frontend-2:checked~.cardsTest #l-frontend-6,
-#s-frontend-3:checked~.cardsTest #l-frontend-7,
-#s-frontend-4:checked~.cardsTest #l-frontend-8,
-#s-frontend-5:checked~.cardsTest #l-frontend-9,
-#s-frontend-6:checked~.cardsTest #l-frontend-1,
-#s-frontend-7:checked~.cardsTest #l-frontend-2,
-#s-frontend-8:checked~.cardsTest #l-frontend-3,
-#s-frontend-9:checked~.cardsTest #l-frontend-4 {
+#s-frontend-1:checked~.cardLabel #l-frontend-5,
+#s-frontend-2:checked~.cardLabel #l-frontend-6,
+#s-frontend-3:checked~.cardLabel #l-frontend-7,
+#s-frontend-4:checked~.cardLabel #l-frontend-8,
+#s-frontend-5:checked~.cardLabel #l-frontend-9,
+#s-frontend-6:checked~.cardLabel #l-frontend-1,
+#s-frontend-7:checked~.cardLabel #l-frontend-2,
+#s-frontend-8:checked~.cardLabel #l-frontend-3,
+#s-frontend-9:checked~.cardLabel #l-frontend-4 {
   transform: scale(0.4) translateX(205%);
   z-index: 1;
 }

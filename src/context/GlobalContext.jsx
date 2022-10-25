@@ -13,9 +13,10 @@ export default function GlobalProvider({ children }) {
   const [active, setActive] = useState(isMobile);
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth <= 767 && !active) {
+    if (window.innerWidth <= 991 && !active) {
+      console.log(active, window.innerWidth);
       setActive(true);
-    } else if (window.innerWidth > 767 && active) {
+    } else if (window.innerWidth > 991 && active) {
       setActive(false);
     }
   });

@@ -4,13 +4,14 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { isMobile } from 'react-device-detect';
 import { RiLinkedinFill } from 'react-icons/ri';
 import { AiOutlineGithub } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './header.module.scss';
 import { GlobalContext } from '../../context/GlobalContext';
 
-export default function Header() {
+export function Header() {
   const { active } = useContext(GlobalContext);
   const [expanded, setExpanded] = useState(false);
+  const { pathname } = useLocation();
 
   const customToggle = (
     <Container
@@ -22,7 +23,11 @@ export default function Header() {
   );
 
   const socilNetwork = (
-    <Container className={window.innerWidth > 767 && !isMobile ? 'justify-content-end' : 'justify-content-center mt-1'}>
+    <Container
+      className={
+        window.innerWidth >= 991 && !isMobile ? 'd-flex justify-content-end' : 'd-flex justify-content-center mt-1 mb-3'
+      }
+    >
       {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a className={`${styles.github} mx-3`} href="https://github.com/AC-Oliveira" target="_blank" rel="noreferrer">
         <AiOutlineGithub size={30} />
@@ -39,51 +44,77 @@ export default function Header() {
   );
 
   return (
-    <Navbar className="p-0" expand="md" expanded={expanded}>
+    // eslint-disable-next-line react/jsx-boolean-value
+    <Navbar className="p-0" expand="lg" expanded={expanded}>
       <Container className={styles.mainContainer}>
         <Container className={active ? 'mx-0' : ''}>
           <Navbar.Brand href="#home" className={`${styles.logo} me-3 font-weight-bold`}>
             Allan Oliveira
           </Navbar.Brand>
         </Container>
-        {active && customToggle}
+        {window.innerWidth <= 991 && active && customToggle}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto w-100 flex justify-content-center">
-            <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
-              <Link to="/" className="text-decoration-none">
+            <Nav.Link
+              onClick={() => setExpanded(false)}
+              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
+            >
+              <Link to="/" className={`${pathname === '/' && 'selected-route'} text-decoration-none`}>
                 Sobre mim
               </Link>
             </Nav.Link>
-            <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
-              <Link to="/projects/sites" className="text-decoration-none">
+            <Nav.Link
+              onClick={() => setExpanded(false)}
+              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
+            >
+              <Link
+                to="/sites"
+                className={`${pathname.includes('sites') && 'selected-route'} ${
+                  pathname.includes('repositories') && 'selected-route'
+                }  text-decoration-none`}
+              >
                 Projetos
               </Link>
             </Nav.Link>
-            <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
+            <Nav.Link
+              onClick={() => setExpanded(false)}
+              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
+            >
               <Link to="/contact" className="text-decoration-none">
                 Fale Comigo
               </Link>
             </Nav.Link>
-            <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
+            <Nav.Link
+              onClick={() => setExpanded(false)}
+              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
+            >
               <a
                 onClick={() => {
-                  window.open('../public/projects/fundamentos/1lessonslearned/index.html');
+                  window.open(
+                    'https://drive.google.com/uc?export=download&id=1CQCZ19n7SeBisQ0C9_cYhrQuJVloNM3n',
+                    '_blank'
+                  );
                 }}
-                href="#"
+                href="#/"
                 className="text-decoration-none"
+                target="_blank"
+                rel="noreferrer"
               >
                 Currículo
               </a>
             </Nav.Link>
-            <Nav.Link className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}>
+            <Nav.Link
+              onClick={() => setExpanded(false)}
+              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
+            >
               <Link to="/knowledge" className="text-decoration-none">
                 Conhecimentos
               </Link>
             </Nav.Link>
-            {window.innerWidth <= 767 && active && socilNetwork}
+            {window.innerWidth <= 991 && active && socilNetwork}
           </Nav>
         </Navbar.Collapse>
-        {window.innerWidth > 767 && !active && socilNetwork}
+        {window.innerWidth > 991 && !active && socilNetwork}
       </Container>
     </Navbar>
   );

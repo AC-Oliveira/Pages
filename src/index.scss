@@ -10,10 +10,15 @@
   }
   .primary {
     color: #0a66c2!important;
+    fill: #0a66c2!important;
   }
   .content {
     min-height: calc(100vh - 90px);
     max-width: 1400px;
+    // overflow-x: hidden!important;
+  }
+  .whatsapp {
+    background-color: #25d366!important;
   }
 }
 
@@ -54,3 +59,7 @@ body {
 html, body, #root {
   min-height: 100vh;
 }
+
+// https://docs.google.com/file/uc?id=1zXkYkLpc9sM1IxsyqJUFazK56WcQvFGBjNgbrJdsOiw&export=download/
+// https://drive.google.com/uc?export=download&id=1zXkYkLpc9sM1IxsyqJUFazK56WcQvFGBjNgbrJdsOiw
+// https://drive.google.com/uc?export=download&id=1QEEMHJPUm5_358bLc-WHBJR-eKaJjpqp

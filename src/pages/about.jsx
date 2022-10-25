@@ -1,20 +1,24 @@
 import { useContext } from 'react';
 import { Container, Image } from 'react-bootstrap';
-import myself from '../assets/eu.jpg';
+// import myself from '../assets/eu.jpg';
+import meme from '../assets/mem.jpg';
 import { GlobalContext } from '../context/GlobalContext';
 
-export default function About() {
+export function About() {
   const { active } = useContext(GlobalContext);
   return (
-    <Container style={{ maxWidth: active ? '90vw' : '1140px' }} className="content d-flex align-items-center">
+    <Container className="content d-flex align-items-center justify-content-center">
       <Container
-        className={`bg-dark rounded d-flex ${!active && 'p-4'} ${active && 'flex-column mx-auto my-2 py-4 px-1'}`}
+        className={`bg-dark rounded d-flex ${!active && 'p-4'} ${
+          active && 'flex-column mx-auto my-2 py-4 px-1'
+        } justify-content-center align-items-center`}
       >
         <Container>
-          <Image style={{ borderRadius: '50px' }} src={myself} fluid />
+          <Image style={{ borderRadius: '50px' }} src={meme} fluid />
         </Container>
         <Container className={active && 'mt-4'}>
-          <h1 className="title">Sobre mim</h1>
+          {/* <h1 className="title">Sobre mim</h1> */}
+          <h1 className="title">Em construção</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi
             repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto

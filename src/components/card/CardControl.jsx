@@ -1,9 +1,7 @@
 import { Button, Col, Row } from 'react-bootstrap';
 
 export function CardControl({ cb, index, maxLen }) {
-  console.log('render');
   const indexHandler = (type) => {
-    console.log(type);
     if (type === 'next') {
       if (index === maxLen) {
         cb(1);
@@ -20,7 +18,7 @@ export function CardControl({ cb, index, maxLen }) {
   };
 
   return (
-    <Row className="d-flex mx-0 px-0 bg-gray rounded">
+    <Row className="d-flex mx-0 px-0 bg-gray rounded mt-2">
       <Col className="px-0">
         <Button className="border-0 me-1 rounded-0 prev" onClick={() => indexHandler('prev')}>
           {'<'}

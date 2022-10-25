@@ -1,16 +1,19 @@
+import { useContext } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import myRepositories from '../assets/repositories.json';
 import { RepoCard } from '../components/repoCard';
+import { GlobalContext } from '../context/GlobalContext';
 
 export function ProjectsRepositories() {
   const { pathname } = useLocation();
+  const { active } = useContext(GlobalContext);
   return (
     <Container className="content">
       <Container className="mx-0 px-0 d-flex justify-content-center my-2">
         <a
           className={`text-center text-decoration-none py-0 my-0 prj ${pathname.includes('sites') && 'prj-selected'}`}
-          href="/projects/sites"
+          href="#/sites"
         >
           Sites
         </a>
@@ -18,13 +21,13 @@ export function ProjectsRepositories() {
           className={`text-center text-decoration-none py-0 my-0  prj ${
             pathname.includes('repositories') && 'prj-selected'
           }`}
-          href="/projects/repositories"
+          href="#/repositories"
         >
           Repositórios
         </a>
       </Container>
       <Row className="mb-5">
-        <h3 className="text-center title mt-4">Pessoal</h3>
+        <h3 className={`text-center title ${active ? 'mt-5' : 'mt-4'}`}>Pessoal</h3>
         {myRepositories.pessoal.map((repo) => (
           <Col className="mt-3" lg={6}>
             <RepoCard
@@ -36,7 +39,7 @@ export function ProjectsRepositories() {
           </Col>
         ))}
       </Row>
-      <h3 className="text-center title mt-5">Trybe</h3>
+      <h3 className={`text-center title ${active ? 'mt-2' : 'mt-3'}`}>Trybe</h3>
       <Row>
         <h4 className="text-center mt-3">Javascript</h4>
         {myRepositories.trybe.javascript.map((repo) => (
