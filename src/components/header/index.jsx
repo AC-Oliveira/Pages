@@ -80,8 +80,16 @@ export function Header() {
               onClick={() => setExpanded(false)}
               className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
             >
-              <Link to="/contact" className="text-decoration-none">
+              <Link to="/contact" className={`${pathname === '/contact' && 'selected-route'} text-decoration-none`}>
                 Fale Comigo
+              </Link>
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => setExpanded(false)}
+              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
+            >
+              <Link to="/knowledge" className={`${pathname === '/knowledge' && 'selected-route'} text-decoration-none`}>
+                Conhecimentos
               </Link>
             </Nav.Link>
             <Nav.Link
@@ -100,16 +108,8 @@ export function Header() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Currículo
+                Baixar Currículo
               </a>
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => setExpanded(false)}
-              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
-            >
-              <Link to="/knowledge" className="text-decoration-none">
-                Conhecimentos
-              </Link>
             </Nav.Link>
             {window.innerWidth <= 991 && active && socilNetwork}
           </Nav>
