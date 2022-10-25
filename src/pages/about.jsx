@@ -19,11 +19,11 @@ export function About() {
           {/* <h1 className="title">Sobre mim</h1> */}
           <h1 className="title">Sobre mim</h1>
           <p>
-            Me chamo Allan Oliveira, residente de São Gonçalo - RJ, atualmente estou migrando do curso de Engenharia
+            Me chamo Allan Oliveira, habitante de São Gonçalo - RJ, atualmente estou migrando do curso de Engenharia
             Elétrica para Ciências da Computação na UERJ. Em 2022 terminei o curso de Desenvolvimento Web da Trybe, um
             curso com mais de 1500 horas de formação que aborda conteúdos relacionados a fundamentos de desenvolvimento
             web, desenvolvimento Front-end, desenvolvimento Back-end, ciência da computação, engenharia de software,
-            metodologias ágeis e habilidades comportamentais Atualmente trabalho na área de Desenvolvimento Web como
+            metodologias ágeis e habilidades comportamentais. Hoje trabalho na área de Desenvolvimento Web como
             Freelancer e estou buscando oportunidades no mercado como desenvolvedor de software.
           </p>
         </Container>
