@@ -88,8 +88,11 @@ export function Header() {
               onClick={() => setExpanded(false)}
               className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
             >
-              <Link to="/knowledge" className={`${pathname === '/knowledge' && 'selected-route'} text-decoration-none`}>
-                Conhecimentos
+              <Link
+                to="/technologies"
+                className={`${pathname === '/technologies' && 'selected-route'} text-decoration-none`}
+              >
+                Tecnologias
               </Link>
             </Nav.Link>
             <Nav.Link

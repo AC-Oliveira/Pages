@@ -4,7 +4,7 @@ import { Footer } from './components/footer';
 import { Header } from './components/header';
 import { About } from './pages/about';
 import { Contact } from './pages/contact';
-import { Knowledge } from './pages/knowledge';
+import { Technologies } from './pages/technologies';
 import { ProjectsRepositories } from './pages/projectsRepositories';
 import { ProjectsSites } from './pages/projectsSites';
 
@@ -17,7 +17,7 @@ function App() {
         <Route path="/sites" element={<ProjectsSites />} />
         <Route path="/repositories" element={<ProjectsRepositories />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/knowledge" element={<Knowledge />} />
+        <Route path="/technologies" element={<Technologies />} />
       </Routes>
       <Footer />
     </>

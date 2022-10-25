@@ -52,7 +52,7 @@ export function Contact() {
           </a>
         </Col>
         <Col lg={6} className={`${active ? 'my-5' : ''}`}>
-          <h3 className="title">Me envie um email:</h3>
+          <h3 className="title">Me envie uma mensagem:</h3>
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Nome</Form.Label>

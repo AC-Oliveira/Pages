@@ -2,6 +2,8 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 import { RiCss3Fill, RiHtml5Fill, RiReactjsFill } from 'react-icons/ri';
 import { DiJavascript } from 'react-icons/di';
 import {
+  SiBootstrap,
+  SiChakraui,
   SiDocker,
   SiEslint,
   SiExpress,
@@ -11,6 +13,7 @@ import {
   SiJest,
   SiMongodb,
   SiMysql,
+  SiNextdotjs,
   SiNodedotjs,
   SiPytest,
   SiPython,
@@ -18,10 +21,12 @@ import {
   SiSelenium,
   SiSequelize,
   SiSocketdotio,
+  SiTailwindcss,
+  SiTypescript,
 } from 'react-icons/si';
 import technologies from '../assets/technologies.json';
 
-export function Knowledge() {
+export function Technologies() {
   const technologiesLogos = {
     HTML5: <RiHtml5Fill fill="#e96226" size={150} />,
     CSS3: <RiCss3Fill fill="#264de9" size={150} />,
@@ -44,6 +49,11 @@ export function Knowledge() {
     Python: <SiPython size={150} fill="#f7ce43" />,
     Selenium: <SiSelenium size={150} fill="#00ae00" />,
     Ionic: <SiIonic size={150} fill="#3880ff" />,
+    'Next.js': <SiNextdotjs size={150} fill="#fff" />,
+    Bootstrap: <SiBootstrap size={150} fill="#7952b3" />,
+    ChakraUI: <SiChakraui size={150} fill="#319795" />,
+    'Tailwind CSS': <SiTailwindcss size={150} fill="#38b2ac" />,
+    Typescript: <SiTypescript size={150} fill="#3178c6" />,
   };
   return (
     <Container className="content">

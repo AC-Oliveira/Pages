@@ -82,5 +82,21 @@
   {
     "name": "Ionic",
     "text": "Ionic é um framework de código aberto para desenvolvimento de aplicativos móveis e de desktop baseados em HTML, CSS e JavaScript. Ele é focado no desenvolvimento de aplicativos híbridos e de aplicativos móveis progressivos."
+  },
+  {
+    "name": "Next.js",
+    "text": "Next.js é um framework de desenvolvimento web de código aberto para React que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React."
+  },
+  {
+    "name": "Bootstrap",
+    "text": "Bootstrap é um framework de código aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações da web usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo."
+  },
+  {
+    "name": "Tailwind CSS",
+    "text": "Tailwind CSS é um framework de utilitários de código aberto para criar interfaces de usuário. Ele é projetado para ser totalmente personalizável, com uma classe base de apenas 1,4 KB e sem dependências."
+  },
+  {
+    "name": "Typescript",
+    "text": "TypeScript é um superconjunto de JavaScript desenvolvido pela Microsoft que adiciona tipagem e alguns outros recursos a linguagem. Ele foi originalmente projetado para desenvolvimento de aplicativos JavaScript do lado do cliente, mas foi posteriormente aplicado a projetos JavaScript do lado do servidor."
   }
 ]
