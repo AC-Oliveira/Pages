@@ -147,7 +147,9 @@ div.repocard-container {
 .technologyContainer {
   width: 340px!important;
   height: 300px!important;
-  transition: all 0.5s ease;
+  .card {
+    transition: transform 0.65s ease-in-out;
+  }
   &:hover {
     .card {
         &.up {

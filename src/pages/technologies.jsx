@@ -56,15 +56,15 @@ export function Technologies() {
     Typescript: <SiTypescript size={130} fill="#3178c6" />,
   };
   return (
-    <Container className="content">
+    <Container>
       <h1 className="text-center mt-3 title px-5">Tecnologias</h1>
-      <Row className="mt-4 overflow-hidden">
+      <Row className="mt-4">
         {technologies.map(({ name, text }, index) => (
           <Col className="technologyContainer my-3  d-flex justify-content-center align-items-center">
             <Card style={{ maxWidth: '300px' }} bg="dark" className={technologies.length / 2 < index ? 'up' : 'down'}>
               <Card.Img as="div" variant="top" className="py-2 d-flex justify-content-center">
                 {name === 'Socket.IO' ? (
-                  <Container style={{ width: '150px' }} className="m-0 p-0 rounded-circle bg-dark">
+                  <Container style={{ width: '130px' }} className="m-0 p-0 rounded-circle bg-dark">
                     {technologiesLogos[name]}
                   </Container>
                 ) : (
