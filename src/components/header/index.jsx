@@ -48,7 +48,7 @@ export function Header() {
     <Navbar className="p-0" expand="lg" expanded={expanded}>
       <Container className={styles.mainContainer}>
         <Container className={active ? 'mx-0' : ''}>
-          <Navbar.Brand className={`${styles.logo} me-3 font-weight-bold`}>Allan Oliveira</Navbar.Brand>
+          <Navbar.Brand className={`${styles.logo} fs-4 me-3 font-weight-bold`}>Allan Oliveira</Navbar.Brand>
         </Container>
         {window.innerWidth <= 991 && active && customToggle}
         <Navbar.Collapse id="basic-navbar-nav">
