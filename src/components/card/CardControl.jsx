@@ -20,12 +20,12 @@ export function CardControl({ cb, index, maxLen }) {
   return (
     <Row className="d-flex mx-0 px-0 bg-gray rounded mt-2">
       <Col className="px-0">
-        <Button className="border-0 me-1 rounded-0 prev" onClick={() => indexHandler('prev')}>
+        <Button className="me-1 prev" onClick={() => indexHandler('prev')}>
           {'<'}
         </Button>
       </Col>
       <Col className="px-0">
-        <Button className="border-0 rounded-0 next" onClick={() => indexHandler('next')}>
+        <Button className="next" onClick={() => indexHandler('next')}>
           {'>'}
         </Button>
       </Col>

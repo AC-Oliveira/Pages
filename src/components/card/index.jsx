@@ -9,15 +9,15 @@ export function CustomCard({ onClick, middle, cardType, item: { header, text, li
       {repo !== 'privado' && (
         <Container className="d-none repo-hidden">
           <a href={repo || '/'} target="_blank" rel="noreferrer">
-            <RiGithubFill size={50} fill="#0a66c2" />
+            <RiGithubFill size={50} fill="#2ac7e3" />
           </a>
         </Container>
       )}
       <Card.Body>
         <Card.Title className="title">{header}</Card.Title>
         <Card.Text>{text}</Card.Text>
-        <Button disabled={link === 'privado'} variant="primary">
-          <a className="text-decoration-none" href={link} target="_blank" rel="noreferrer">
+        <Button disabled={link === 'privado'}>
+          <a className="text-dark text-decoration-none" href={link} target="_blank" rel="noreferrer">
             {link === 'privado' ? 'Privado' : 'Ver Projeto'}
           </a>
         </Button>

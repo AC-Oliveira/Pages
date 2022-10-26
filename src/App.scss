@@ -3,6 +3,13 @@
   border: none!important;
   max-height: 60px!important;
   margin: auto auto;
+  background: #2ac7e3;
+  color: #000!important;
+  border-left-color: #2ac7e3!important;
+  &:hover {
+    background: #5dcce0;
+    color: #000!important;
+  }
 }
 .btn:disabled {
   background-color: var(--gray-300) !important;
@@ -13,12 +20,7 @@
 }
 
 .navbar * {
-  font-family: 'Shadows Into Light', cursive !important;
-  color: var(--primary) !important;
-}
-
-.selected-route {
-  color: var(--gray-200)!important;
+  color: #c0c0c0;
 }
 
 .prj {
@@ -70,21 +72,22 @@ div.repocard-container {
     top: 0;
     bottom: 0;
     right: 0;
-    transition: transform 0.95s ease;
     transform-style: preserve-3d;
+    transition: transform 0.65s ease;
     .mainCard {
+      transition: transform 0.65s ease;
       .repo-hidden {
         position: absolute!important;
         height: 197.18px!important;
         background-color: #000;
         opacity: 0.9;
+        transition: all 0.5s ease;
         &:hover {
           display: flex!important;
           justify-content: center!important;
           align-items: center!important;
           svg:hover {
             fill: #fff!important;
-            transition: 0.01s!important;
           }
         }
       }
@@ -144,6 +147,7 @@ div.repocard-container {
 .technologyContainer {
   width: 340px!important;
   height: 300px!important;
+  transition: all 0.5s ease;
   &:hover {
     .card {
         &.up {
@@ -209,7 +213,7 @@ div.repocard-container {
 button.next, button.prev {
   // border-radius: 0 5px 5px 0!important;
   border-top: 2px solid var(--primary)!important;
-  border-left: 2px solid var(--gray-blue)!important;
+  border-left: 2px solid var(--primary)!important;
   border-bottom: 2px solid var(--primary)!important;
   border-right: 2px solid var(--primary)!important;
 }

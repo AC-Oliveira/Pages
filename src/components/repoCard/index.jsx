@@ -26,7 +26,12 @@ export function RepoCard({ repoName, description, link, technologies }) {
       <p>{description}</p>
       <Container className="d-flex justify-content-between w-100">
         <Button className="text-nowrap" disabled={link === 'privado'}>
-          <a className="text-decoration-none" href={link === 'privado' ? '#' : link} target="_blank" rel="noreferrer">
+          <a
+            className="text-dark text-decoration-none"
+            href={link === 'privado' ? '#' : link}
+            target="_blank"
+            rel="noreferrer"
+          >
             Ver Repositório
           </a>
         </Button>

@@ -36,7 +36,7 @@
       "header": "CampoMinado",
       "text": "Uma GUI feita com python3 e Tkinter, aplicando conceitos de POO. A idéia era reproduzir o antigo jogo de windows que joguei muito durante a minha infância.",
       "buttonText": "Ver Projeto",
-      "link": "/to-be-continued",
+      "link": "privado",
       "image": "/images/pessoais/minesweeper.gif",
       "repo": "https://github.com/AC-Oliveira/Project-Minesweeper"
     }

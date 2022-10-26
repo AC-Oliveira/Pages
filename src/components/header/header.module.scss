@@ -6,14 +6,14 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger {
   width: 30px;
   height: 3px;
   background: var(--primary);
   border-radius: 5px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger::before,
 .menu-btn__burger::after {
@@ -23,7 +23,7 @@
   height: 3px;
   background: var(--primary);
   border-radius: 5px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-btn__burger::before {
@@ -46,25 +46,51 @@
 }
 
 .fdUnerline:hover {
-  text-decoration: underline!important;
+  text-decoration: underline !important;
 }
 
 .taCenter {
-  text-align: center!important;
+  text-align: center !important;
 }
 
 .github {
+  div {
+    background: #000;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.5s ease-in-out;
+  }
+  path {
+    fill: #fff;
+  }
   &:hover {
+    div {
+      background: #fff;
+      transform: scale(1.5);
+    }
     path {
-      color: black!important;
+      fill: #000 !important;
     }
   }
 }
 
-.linkedin{
+.linkedin {
+  div {
+    background: #0a66c2 ;
+    border-radius: 5%;
+    padding: 5px;
+    transition: all 0.5s ease-in-out;
+  }
+  path {
+    color: #fff!important;
+  }
   &:hover {
+    div {
+      transform: scale(1.5);
+      background: #fff;
+    }
     path {
-      color: #f0f0f0!important;
+      color: #0a66c2 !important;
     }
   }
 }
@@ -72,33 +98,43 @@
 .mainContainer {
   display: flex;
   align-items: center;
-  >:first-child {
+  > :first-child {
     a {
-      font-size: 2rem!important;
+      font-size: 2rem !important;
     }
   }
   > * {
-    width: fit-content!important;
+    width: fit-content !important;
   }
 }
 
-
 .underline-hover-effect {
+  // border: 1px solid red;
   display: inline-block;
   padding-bottom: 0.25rem;
   position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.25s ease-out;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+  &.selectedLink {
+    &::before {
+      width: 100%;
+    }
+  }
+}
+.selected-route {
+  color: var(--primary) !important;
 }
 
-.underline-hover-effect::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary);
-  transition: width 0.25s ease-out;
-}
-.underline-hover-effect:hover::before {
-  width: 100%;
-}
+// .underline-hover-effect
+// .underline-hover-effect

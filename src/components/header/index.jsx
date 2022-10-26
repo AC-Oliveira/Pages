@@ -30,7 +30,9 @@ export function Header() {
     >
       {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a className={`${styles.github} mx-3`} href="https://github.com/AC-Oliveira" target="_blank" rel="noreferrer">
-        <AiOutlineGithub size={30} />
+        <div>
+          <AiOutlineGithub size={30} />
+        </div>
       </a>
       <a
         className={`${styles.linkedin} mx-3`}
@@ -38,37 +40,49 @@ export function Header() {
         target="_blank"
         rel="noreferrer"
       >
-        <RiLinkedinFill size={30} />
+        <div>
+          <RiLinkedinFill size={30} />
+        </div>
       </a>
     </Container>
   );
 
   return (
     // eslint-disable-next-line react/jsx-boolean-value
-    <Navbar className="p-0" expand="lg" expanded={expanded}>
+    <Navbar className="pt-3 p-0" expand="lg" expanded={expanded}>
       <Container className={styles.mainContainer}>
         <Container className={active ? 'mx-0' : ''}>
-          <Navbar.Brand className={`${styles.logo} fs-4 me-3 font-weight-bold`}>Allan Oliveira</Navbar.Brand>
+          <Navbar.Brand className={`${styles.logo} fs-4 me-3 font-weight-bold ${styles['selected-route']}`}>
+            Allan Oliveira
+          </Navbar.Brand>
         </Container>
         {window.innerWidth <= 991 && active && customToggle}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto w-100 flex justify-content-center">
             <Nav.Link
               onClick={() => setExpanded(false)}
-              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
+              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold ${
+                pathname === '/' && styles.selectedLink
+              }`}
             >
-              <Link to="/" className={`${pathname === '/' && 'selected-route'} text-decoration-none`}>
+              <Link
+                to="/"
+                // eslint-disable-next-line prettier/prettier
+                className={`${pathname === '/' && styles['selected-route']} text-decoration-none`}
+              >
                 Sobre mim
               </Link>
             </Nav.Link>
             <Nav.Link
               onClick={() => setExpanded(false)}
-              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
+              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold ${
+                pathname.includes('sites') && styles.selectedLink
+              } ${pathname.includes('repositories') && styles.selectedLink}`}
             >
               <Link
                 to="/sites"
-                className={`${pathname.includes('sites') && 'selected-route'} ${
-                  pathname.includes('repositories') && 'selected-route'
+                className={`${pathname.includes('sites') && styles['selected-route']} ${
+                  pathname.includes('repositories') && styles['selected-route']
                 }  text-decoration-none`}
               >
                 Projetos
@@ -76,19 +90,26 @@ export function Header() {
             </Nav.Link>
             <Nav.Link
               onClick={() => setExpanded(false)}
-              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
+              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold ${
+                pathname === '/contact' && styles.selectedLink
+              } `}
             >
-              <Link to="/contact" className={`${pathname === '/contact' && 'selected-route'} text-decoration-none`}>
+              <Link
+                to="/contact"
+                className={`${pathname === '/contact' && styles['selected-route']} text-decoration-none`}
+              >
                 Fale Comigo
               </Link>
             </Nav.Link>
             <Nav.Link
               onClick={() => setExpanded(false)}
-              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold`}
+              className={`${!active && styles['underline-hover-effect']} ${styles.taCenter} font-weight-bold ${
+                pathname === '/technologies' && styles.selectedLink
+              }`}
             >
               <Link
                 to="/technologies"
-                className={`${pathname === '/technologies' && 'selected-route'} text-decoration-none`}
+                className={`${pathname === '/technologies' && styles['selected-route']} text-decoration-none`}
               >
                 Tecnologias
               </Link>

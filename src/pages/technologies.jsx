@@ -28,32 +28,32 @@ import technologies from '../assets/technologies.json';
 
 export function Technologies() {
   const technologiesLogos = {
-    HTML5: <RiHtml5Fill fill="#e96226" size={150} />,
-    CSS3: <RiCss3Fill fill="#264de9" size={150} />,
-    JavaScript: <DiJavascript fill="#efd81d" size={150} />,
-    ESLint: <SiEslint fill="#4b32c3" size={150} />,
-    Jest: <SiJest fill="#c21325" size={150} />,
-    React: <RiReactjsFill fill="#61dafb" size={150} />,
-    Redux: <SiRedux fill="#7248b6" size={150} />,
-    'Context API': <RiReactjsFill fill="#29629b" size={150} />,
-    MySQL: <SiMysql fill="#dd8a00" size={150} />,
-    'Node.js': <SiNodedotjs fill="#6fa560" size={150} />,
-    MongoDB: <SiMongodb fill="#429643" size={150} />,
-    Docker: <SiDocker fill="#2392e6" size={150} />,
-    Express: <SiExpress fill="#87be4d" size={150} />,
-    Sequelize: <SiSequelize fill="#52b0e7" size={150} />,
-    Heroku: <SiHeroku size={150} fill="#541fac" />,
-    Git: <SiGit fill="#f05032" size={150} />,
-    'Socket.IO': <SiSocketdotio size={150} fill="#ffffff" />,
-    Pytest: <SiPytest size={150} fill="#009ccd" />,
-    Python: <SiPython size={150} fill="#f7ce43" />,
-    Selenium: <SiSelenium size={150} fill="#00ae00" />,
-    Ionic: <SiIonic size={150} fill="#3880ff" />,
-    'Next.js': <SiNextdotjs size={150} fill="#fff" />,
-    Bootstrap: <SiBootstrap size={150} fill="#7952b3" />,
-    ChakraUI: <SiChakraui size={150} fill="#319795" />,
-    'Tailwind CSS': <SiTailwindcss size={150} fill="#38b2ac" />,
-    Typescript: <SiTypescript size={150} fill="#3178c6" />,
+    HTML5: <RiHtml5Fill fill="#e96226" size={130} />,
+    CSS3: <RiCss3Fill fill="#264de9" size={130} />,
+    JavaScript: <DiJavascript fill="#efd81d" size={130} />,
+    ESLint: <SiEslint fill="#4b32c3" size={130} />,
+    Jest: <SiJest fill="#c21325" size={130} />,
+    React: <RiReactjsFill fill="#61dafb" size={130} />,
+    Redux: <SiRedux fill="#7248b6" size={130} />,
+    'Context API': <RiReactjsFill fill="#29629b" size={130} />,
+    MySQL: <SiMysql fill="#dd8a00" size={130} />,
+    'Node.js': <SiNodedotjs fill="#6fa560" size={130} />,
+    MongoDB: <SiMongodb fill="#429643" size={130} />,
+    Docker: <SiDocker fill="#2392e6" size={130} />,
+    Express: <SiExpress fill="#87be4d" size={130} />,
+    Sequelize: <SiSequelize fill="#52b0e7" size={130} />,
+    Heroku: <SiHeroku size={130} fill="#541fac" />,
+    Git: <SiGit fill="#f05032" size={130} />,
+    'Socket.IO': <SiSocketdotio size={130} fill="#ffffff" />,
+    Pytest: <SiPytest size={130} fill="#009ccd" />,
+    Python: <SiPython size={130} fill="#f7ce43" />,
+    Selenium: <SiSelenium size={130} fill="#00ae00" />,
+    Ionic: <SiIonic size={130} fill="#3880ff" />,
+    'Next.js': <SiNextdotjs size={130} fill="#fff" />,
+    Bootstrap: <SiBootstrap size={130} fill="#7952b3" />,
+    ChakraUI: <SiChakraui size={130} fill="#319795" />,
+    'Tailwind CSS': <SiTailwindcss size={130} fill="#38b2ac" />,
+    Typescript: <SiTypescript size={130} fill="#3178c6" />,
   };
   return (
     <Container className="content">
@@ -62,7 +62,7 @@ export function Technologies() {
         {technologies.map(({ name, text }, index) => (
           <Col className="technologyContainer my-3  d-flex justify-content-center align-items-center">
             <Card style={{ maxWidth: '300px' }} bg="dark" className={technologies.length / 2 < index ? 'up' : 'down'}>
-              <Card.Img as="div" variant="top" className="d-flex justify-content-center">
+              <Card.Img as="div" variant="top" className="py-2 d-flex justify-content-center">
                 {name === 'Socket.IO' ? (
                   <Container style={{ width: '150px' }} className="m-0 p-0 rounded-circle bg-dark">
                     {technologiesLogos[name]}
